@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+// reset
+@import "./modules/resets";
+
+// variables
+@import "./modules/variables";
+//components
+@import "./modules/navbar";
+@import "./modules/footer";
+
+// media queries
+@import "./modules/mobile_styles";
+@import "./modules/tablet_styles";
+@import "./modules/desktop_styles";

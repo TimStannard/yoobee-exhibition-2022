@@ -1,0 +1,64 @@
+@media screen and (min-width: 780px) {
+
+    // general
+    .container-lg {
+        padding: $large-spacing;
+    }
+
+    // navbar
+    .show-mobile-menu-button {
+        display: none;
+    }
+
+    #topnav #logo {
+        margin-top: 0px;
+        margin-bottom: -7px;
+    }
+
+    #menu {
+        display: block;
+        width: 85%;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    #menu-container {
+        display: none;
+    }
+
+    // search
+    #search-bar {
+        border: none;
+        padding: 5px;
+    }
+
+    #submit-search {
+        background: none;
+        border: none;
+        color: $black;
+        font-size: 18px;
+
+        svg {
+            position: relative;
+            left: -23px;
+            top: 4px;
+        }
+    }
+
+    // home page
+    // hero
+    #home {
+        #hero {
+            img {
+                width: 75vw;
+            }
+        }
+    }
+
+}

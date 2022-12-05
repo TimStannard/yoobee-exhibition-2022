@@ -1,0 +1,97 @@
+// ---------general
+
+.arrow-down {
+    background: none;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    font-size: $icon-regular;
+    margin-bottom: $fix-icon-margin;
+}
+
+// ---------navbar
+
+#logo {
+    width: 50px;
+}
+
+// -----------general
+
+.container-lg {
+    padding: $med-spacing;
+}
+
+// ---------home
+
+//general
+.bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -99;
+
+
+    img {
+        position: absolute;
+        top: 23vw;
+        right: -43vw;
+    }
+}
+
+// .page-section {
+//     padding: $med-spacing;
+// }
+
+// hero
+
+#tagline {
+    font-size: $tagline-s;
+    font-weight: $tagline-weight;
+    text-align: center;
+    margin-bottom: $med-spacing;
+}
+
+#home #hero {
+    text-align: center;
+    margin: 50px 0px;
+
+    img {
+        width: 75vw;
+        margin-bottom: $larger-spacing;
+        margin-top: $small-spacing;
+    }
+}
+
+// ---------faculties section
+.page-section {
+    h2 {
+        font-size: $header-large-vw;
+        line-height: $header-large-vw;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-bottom: $section-spacing;
+    }
+
+    h3 {
+        font-size: $header-med-vw;
+        line-height: $header-med-vw;
+    }
+}
+
+#faculties {
+    text-align: center;
+
+    .faculty-item {
+        margin-bottom: $largest-spacing;
+
+        img {
+            width: 100%;
+            max-width: 125px;
+            margin-bottom: $med-spacing;
+        }
+    }
+}
