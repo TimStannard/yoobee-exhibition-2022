@@ -5,9 +5,13 @@
   margin: 0;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 /* nav */
 #topnav {
-  background: #000000;
+  background: #1a1a18;
   color: #FFFFFF;
   display: flex;
   padding: 20px;
@@ -73,20 +77,28 @@
 
 #mobile-menu {
   width: 100%;
-  height: 100%;
-  background-color: #000000;
-  position: fixed;
+  background-color: #1a1a18;
   z-index: 1;
-  top: 0;
-  left: 0;
-  padding-top: 100px;
 }
 #mobile-menu a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 52px;
+  font-size: 50px;
   margin-bottom: 30px;
   font-weight: 400;
+}
+
+#menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #1a1a18;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: -78px;
 }
 
 #mobile-menu ul {
@@ -94,10 +106,9 @@
 }
 #mobile-menu li {
   text-decoration: none;
-  font-size: 30px;
   display: block;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 90px 0px;
   font-weight: 100;
 }
 
@@ -129,7 +140,7 @@
 
 #footer {
   text-align: center;
-  background: #000000;
+  background: #1a1a18;
   color: white;
   padding: 30px;
 }
@@ -147,6 +158,24 @@
   font-size: 12.5px;
 }
 
+#swiper-featured .swiper-slide {
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
+body {
+  background: #f9f9f9;
+}
+
 .arrow-down {
   background: none;
   border: none;
@@ -154,6 +183,11 @@
   margin: 0 auto;
   font-size: 45px;
   margin-bottom: -5px;
+  color: #1a1a18;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 #logo {
@@ -161,13 +195,15 @@
 }
 
 .container-lg {
-  padding: 25px;
+  padding: 15px;
+}
+
+.bubble-container {
+  position: relative;
 }
 
 .bubble {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -175,15 +211,31 @@
 }
 .bubble img {
   position: absolute;
-  top: 23vw;
-  right: -43vw;
+}
+
+#bubble-1 {
+  top: 0;
+  left: 0;
+}
+#bubble-1 img {
+  top: 27vw;
+  right: -49vw;
+}
+
+#bubble-2 {
+  top: 102.5vh;
+  left: 0px;
+}
+#bubble-2 img {
+  top: -15vw;
+  left: -115vw;
 }
 
 #tagline {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 100;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 #home #hero {
@@ -191,18 +243,24 @@
   margin: 50px 0px;
 }
 #home #hero img {
-  width: 75vw;
+  width: 95%;
   margin-bottom: 35px;
-  margin-top: 10px;
+}
+
+#featured {
+  margin-bottom: 55px;
+}
+#featured #featured-projects {
+  padding-bottom: 55px;
 }
 
 .page-section h2 {
   font-size: 15vw;
   line-height: 15vw;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: -1px;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 55px;
 }
 .page-section h3 {
   font-size: 8.5vw;
@@ -212,13 +270,12 @@
 #faculties {
   text-align: center;
 }
-#faculties .faculty-item {
-  margin-bottom: 55px;
-}
 #faculties .faculty-item img {
-  width: 100%;
   max-width: 125px;
   margin-bottom: 25px;
+}
+#faculties .faculty-item h3 {
+  margin-bottom: 55px;
 }
 
 @media screen and (min-width: 780px) {
@@ -252,7 +309,7 @@
   #submit-search {
     background: none;
     border: none;
-    color: #000000;
+    color: #1a1a18;
     font-size: 18px;
   }
   #submit-search svg {

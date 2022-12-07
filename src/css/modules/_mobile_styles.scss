@@ -1,5 +1,18 @@
 // ---------general
 
+
+h1,
+h2,
+h3,
+h4,
+p {
+    text-align: center;
+}
+
+body {
+    background: $body-bg;
+}
+
 .arrow-down {
     background: none;
     border: none;
@@ -7,6 +20,11 @@
     margin: 0 auto;
     font-size: $icon-regular;
     margin-bottom: $fix-icon-margin;
+    color: $black;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 // ---------navbar
@@ -18,32 +36,47 @@
 // -----------general
 
 .container-lg {
-    padding: $med-spacing;
+    padding: $regular-spacing;
 }
 
 // ---------home
 
 //general
+.bubble-container {
+    position: relative;
+}
+
 .bubble {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     z-index: -99;
 
-
     img {
         position: absolute;
-        top: 23vw;
-        right: -43vw;
     }
 }
 
-// .page-section {
-//     padding: $med-spacing;
-// }
+#bubble-1 {
+    top: 0;
+    left: 0;
+
+    img {
+        top: 27vw;
+        right: -49vw;
+    }
+}
+
+#bubble-2 {
+    top: 102.5vh;
+    left: 0px;
+
+    img {
+        top: -15vw;
+        left: -115vw;
+    }
+}
 
 // hero
 
@@ -51,7 +84,7 @@
     font-size: $tagline-s;
     font-weight: $tagline-weight;
     text-align: center;
-    margin-bottom: $med-spacing;
+    margin-bottom: $larger-spacing;
 }
 
 #home #hero {
@@ -59,9 +92,17 @@
     margin: 50px 0px;
 
     img {
-        width: 75vw;
+        width: 95%;
         margin-bottom: $larger-spacing;
-        margin-top: $small-spacing;
+    }
+}
+
+// ---------featured section
+#featured {
+    margin-bottom: $largest-spacing;
+
+    #featured-projects {
+        padding-bottom: $largest-spacing;
     }
 }
 
@@ -71,9 +112,9 @@
         font-size: $header-large-vw;
         line-height: $header-large-vw;
         text-transform: uppercase;
-        letter-spacing: 0px;
+        letter-spacing: -1px;
         text-align: center;
-        margin-bottom: $section-spacing;
+        margin-bottom: $largest-spacing;
     }
 
     h3 {
@@ -86,12 +127,15 @@
     text-align: center;
 
     .faculty-item {
-        margin-bottom: $largest-spacing;
+
 
         img {
-            width: 100%;
             max-width: 125px;
             margin-bottom: $med-spacing;
+        }
+
+        h3 {
+            margin-bottom: $largest-spacing;
         }
     }
 }

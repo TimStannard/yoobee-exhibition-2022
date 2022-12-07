@@ -14,20 +14,22 @@ const MobileMenu = ({ closeMethod }) => {
     }, [])
     return (
         <>
-            <button id="close-nav-menu" onClick={closeMethod}>
+            <button data-aos="fade-down" data-aos-delay="300" id="close-nav-menu" onClick={closeMethod}>
                 <X />
             </button>
-            <ul id='mobile-menu'>
-                <li data-aos="zoom-out">
-                    <Link to="/">Web & UX</Link>
-                </li>
-                <li data-aos="zoom-out" data-aos-delay="100">
-                    <Link to="/artists">Animation</Link>
-                </li>
-                <li data-aos="zoom-out" data-aos-delay="200">
-                    <Link to="/shop">Film & Television</Link>
-                </li>
-            </ul>
+            <div id="menu-wrapper">
+                <ul id='mobile-menu'>
+                    <li data-aos="zoom-out-down">
+                        <Link to="/">Web & UX</Link>
+                    </li>
+                    <li data-aos="zoom-out" data-aos-delay="100">
+                        <Link to="/artists">Animation</Link>
+                    </li>
+                    <li data-aos="zoom-out-up" data-aos-delay="200">
+                        <Link to="/shop">Film & Television</Link>
+                    </li>
+                </ul>
+            </div>
         </>
     )
 }
