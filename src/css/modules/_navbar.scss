@@ -64,9 +64,9 @@
     color: $white;
 }
 
-#close-nav-menu {
-    opacity: 0.5;
-}
+// #close-nav-menu {
+//     opacity: 0.5;
+// }
 
 #mobile-menu {
     width: 100%;
@@ -74,11 +74,13 @@
     z-index: 1;
 
     a {
-        color: $white;
+        color: #FFFFFF;
         text-decoration: none;
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 30px;
-        font-weight: 400;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 }
 

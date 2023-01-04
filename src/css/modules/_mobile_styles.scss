@@ -7,6 +7,7 @@ h3,
 h4,
 p {
     text-align: center;
+    color: $white;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
     margin: 0 auto;
     font-size: $icon-regular;
     margin-bottom: $fix-icon-margin;
-    color: $black;
+    color: $white;
 }
 
 .no-scroll {
@@ -33,10 +34,24 @@ body {
     width: 50px;
 }
 
-// -----------general
+// -----------containers
 
 .container-lg {
-    padding: $regular-spacing;
+    padding: $largest-spacing $large-spacing;
+}
+
+// -----------buttons
+
+.button {
+    display: inline-block;
+
+    &.regular {
+        color: $white;
+        font-weight: 400;
+        border: 1px solid $white;
+        padding: $small-spacing;
+        border-radius: $small-radius;
+    }
 }
 
 // ---------home
@@ -84,12 +99,12 @@ body {
     font-size: $tagline-s;
     font-weight: $tagline-weight;
     text-align: center;
-    margin-bottom: $larger-spacing;
+    margin-bottom: $largest-spacing;
 }
 
 #home #hero {
     text-align: center;
-    margin: 50px 0px;
+    margin-bottom: $section-spacing;
 
     img {
         width: 95%;
@@ -99,10 +114,11 @@ body {
 
 // ---------featured section
 #featured {
-    margin-bottom: $largest-spacing;
+    margin-bottom: $max-spacing;
+    text-align: center;
 
     #featured-projects {
-        padding-bottom: $largest-spacing;
+        padding-bottom: $larger-spacing;
     }
 }
 
@@ -112,14 +128,20 @@ body {
         font-size: $header-large-vw;
         line-height: $header-large-vw;
         text-transform: uppercase;
-        letter-spacing: -1px;
+        letter-spacing: 1px;
         text-align: center;
         margin-bottom: $largest-spacing;
+        font-weight: $heavy;
     }
 
     h3 {
-        font-size: $header-med-vw;
+        font-size: $header-regular-vw;
         line-height: $header-med-vw;
+        text-decoration: none;
+        margin-bottom: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 }
 
@@ -130,7 +152,7 @@ body {
 
 
         img {
-            max-width: 125px;
+            max-width: 75px;
             margin-bottom: $med-spacing;
         }
 

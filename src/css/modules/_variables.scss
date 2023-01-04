@@ -1,15 +1,17 @@
 // -----------colours
 
 $black: #1a1a18;
-$body-bg: #f9f9f9;
+$body-bg: #1a1a18;
 $white: #FFFFFF;
 $lightyellow: #fff1c9;
 $orange: #fb5607;
 $purple: #8338ec;
+$pink: #ea2b7b;
 
 // -----------spacing
+$max-spacing: 100px;
 $section-spacing: 70px;
-$largest-spacing: 55px;
+$largest-spacing: 60px;
 $larger-spacing: 35px;
 $large-spacing: 30px;
 $med-spacing: 25px;
@@ -19,10 +21,11 @@ $small-spacing: 10px;
 // -----------fonts
 
 //headers
-$header-large-vw: 15vw;
+$header-large-vw: 10vw;
 $header-med-vw: 8.5vw;
 $header-med: 40px;
 $subheader-med: 30px;
+$header-regular-vw: 6.5vw;
 $subheader-small: 28px;
 
 // body
@@ -37,3 +40,9 @@ $tagline-weight: 100;
 //icons
 $icon-regular: 45px;
 $fix-icon-margin: -5px;
+
+// border-radius
+$small-radius: 5px;
+
+// font-weight
+$heavy: 900;

@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import FeaturedProjects from "../components/FeaturedProjects";
 // images
 import bubble from '../img/bubble.svg';
-import heroLogo from '../img/hero-logo.svg';
+import heroLogo from '../img/hero-logo-reversed.svg';
 // icons
 import { ArrowDownCircle } from 'react-bootstrap-icons';
 import webUxIcon from '../img/web-ux-icon.svg';
@@ -45,7 +45,7 @@ const Home = () => {
                 <div id="hero">
                     <img src={heroLogo} data-aos="zoom-out" alt="full size exhibition logo" />
                     <p id="tagline" data-aos="zoom-out" data-aos-delay="200" >
-                        A showcase of our graduating students’ postgraduate work—in Web & UX design, Animation, and Film.
+                        A showcase of our graduating students’ postgraduate work — in Web & UX design, Animation, and Film.
                     </p>
                     <button className="arrow-down" data-aos="zoom-out" data-aos-delay="400" ref={ref} onClick={handleScroll}>
                         <ArrowDownCircle />
@@ -54,6 +54,7 @@ const Home = () => {
                 <div id="featured" className="page-section">
                     <h2 data-aos="zoom-out-down" data-aos-delay="600">Featured Projects</h2>
                     <FeaturedProjects />
+                    <div data-aos="zoom-out-down" className="button regular">View all projects 👀</div>
                 </div>
                 <div id="bubble-2" className="bubble">
                     <img src={bubble} alt="colourful bubble background decal" />

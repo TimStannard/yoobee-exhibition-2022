@@ -71,10 +71,6 @@
   color: #FFFFFF;
 }
 
-#close-nav-menu {
-  opacity: 0.5;
-}
-
 #mobile-menu {
   width: 100%;
   background-color: #1a1a18;
@@ -83,9 +79,11 @@
 #mobile-menu a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 30px;
-  font-weight: 400;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #menu-wrapper {
@@ -140,9 +138,10 @@
 
 #footer {
   text-align: center;
-  background: #1a1a18;
-  color: white;
-  padding: 30px;
+  background: black;
+  color: #FFFFFF;
+  padding: 60px 30px;
+  border-top: 1px solid #373737;
 }
 #footer a {
   color: #FFFFFF;
@@ -170,10 +169,11 @@ h3,
 h4,
 p {
   text-align: center;
+  color: #FFFFFF;
 }
 
 body {
-  background: #f9f9f9;
+  background: #1a1a18;
 }
 
 .arrow-down {
@@ -183,7 +183,7 @@ body {
   margin: 0 auto;
   font-size: 45px;
   margin-bottom: -5px;
-  color: #1a1a18;
+  color: #FFFFFF;
 }
 
 .no-scroll {
@@ -195,7 +195,18 @@ body {
 }
 
 .container-lg {
-  padding: 15px;
+  padding: 60px 30px;
+}
+
+.button {
+  display: inline-block;
+}
+.button.regular {
+  color: #FFFFFF;
+  font-weight: 400;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .bubble-container {
@@ -235,12 +246,12 @@ body {
   font-size: 24px;
   font-weight: 100;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 
 #home #hero {
   text-align: center;
-  margin: 50px 0px;
+  margin-bottom: 70px;
 }
 #home #hero img {
   width: 95%;
@@ -248,34 +259,41 @@ body {
 }
 
 #featured {
-  margin-bottom: 55px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 #featured #featured-projects {
-  padding-bottom: 55px;
+  padding-bottom: 35px;
 }
 
 .page-section h2 {
-  font-size: 15vw;
-  line-height: 15vw;
+  font-size: 10vw;
+  line-height: 10vw;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+  font-weight: 900;
 }
 .page-section h3 {
-  font-size: 8.5vw;
+  font-size: 6.5vw;
   line-height: 8.5vw;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #faculties {
   text-align: center;
 }
 #faculties .faculty-item img {
-  max-width: 125px;
+  max-width: 75px;
   margin-bottom: 25px;
 }
 #faculties .faculty-item h3 {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 780px) {

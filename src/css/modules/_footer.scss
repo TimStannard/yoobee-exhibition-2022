@@ -1,8 +1,9 @@
 #footer {
     text-align: center;
-    background: $black;
-    color: white;
-    padding: $large-spacing;
+    background: black;
+    color: $white;
+    padding: $largest-spacing $large-spacing;
+    border-top: 1px solid #373737;
 
     a {
         color: $white;

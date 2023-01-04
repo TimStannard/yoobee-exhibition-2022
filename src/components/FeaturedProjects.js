@@ -26,8 +26,8 @@ const FeaturedProjects = () => {
                 spaceBetween={0}
                 initialSlide={1}
                 // navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -39,14 +39,9 @@ const FeaturedProjects = () => {
                 <SwiperSlide><img src="https://via.placeholder.com/150" /></SwiperSlide>
                 <SwiperSlide><img src="https://via.placeholder.com/150" /></SwiperSlide>
                 <SwiperSlide><img src="https://via.placeholder.com/150" /></SwiperSlide>
-                <SwiperSlide><img src="https://via.placeholder.com/150" /></SwiperSlide>
-                {/* ... */}
             </Swiper>
         </div>
     )
 }
 
 export default FeaturedProjects
-
-{/* <p data-aos="zoom-out">Image here</p>
-<h3 data-aos="zoom-out">Project Name</h3> */}
