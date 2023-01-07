@@ -4,6 +4,9 @@ import yoobeeLogo from '../img/yoobee-logo-white.png';
 
 const Footer = () => {
     return (
+        // <div id="footer" style={{
+        //     backgroundImage: "url(" + "../img/txture.png" + ")"
+        // }}>
         <div id="footer">
             <div className="footer-section">
                 <ul>

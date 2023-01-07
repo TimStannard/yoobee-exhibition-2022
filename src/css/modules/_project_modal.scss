@@ -1,0 +1,39 @@
+#modal {
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000bf;
+    padding: 30vw 30px;
+    backdrop-filter: blur(40px);
+
+    h1 {
+        font-size: $header-largest-vw;
+        margin-bottom: $larger-spacing;
+        color: $yellow;
+    }
+
+    p {
+        margin-bottom: $larger-spacing;
+    }
+
+    #modal-close {
+        z-index: 2;
+        position: absolute;
+        top: 13px;
+        right: 12px;
+        font-size: 53px;
+        color: white;
+    }
+
+    .project-mockup-image {
+        width: 100%;
+        margin-bottom: $largest-spacing;
+
+        &:last-of-type {
+            margin-bottom: 150px;
+        }
+    }
+
+}

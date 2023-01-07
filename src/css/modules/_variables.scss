@@ -4,12 +4,13 @@ $black: #1a1a18;
 $body-bg: #1a1a18;
 $white: #FFFFFF;
 $lightyellow: #fff1c9;
+$yellow: #FCEE1F;
 $orange: #fb5607;
 $purple: #8338ec;
 $pink: #ea2b7b;
 
 // -----------spacing
-$max-spacing: 100px;
+$max-spacing: 120px;
 $section-spacing: 70px;
 $largest-spacing: 60px;
 $larger-spacing: 35px;
@@ -21,12 +22,14 @@ $small-spacing: 10px;
 // -----------fonts
 
 //headers
+$header-largest-vw: 12.5vw;
 $header-large-vw: 10vw;
 $header-med-vw: 8.5vw;
 $header-med: 40px;
 $subheader-med: 30px;
-$header-regular-vw: 6.5vw;
+$header-regular-vw: 7vw;
 $subheader-small: 28px;
+$subheader-small-vw: 4.5vw;
 
 // body
 $paragraph-lg: 45px;

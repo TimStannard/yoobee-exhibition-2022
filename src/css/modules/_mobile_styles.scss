@@ -1,3 +1,27 @@
+// mixins
+
+@mixin h2-styles {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: $larger-spacing;
+    font-weight: $heavy;
+    font-size: $header-large-vw;
+}
+
+@mixin h4-styles {
+    font-size: $subheader-small-vw;
+    position: relative;
+    top: -22px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 12px;
+    background: $yellow;
+    color: black;
+    font-weight: 400;
+}
+
+
 // ---------general
 
 
@@ -8,6 +32,10 @@ h4,
 p {
     text-align: center;
     color: $white;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -102,11 +130,11 @@ body {
     margin-bottom: $largest-spacing;
 }
 
-#home #hero {
+#main #hero {
     text-align: center;
     margin-bottom: $section-spacing;
 
-    img {
+    #home-logo {
         width: 95%;
         margin-bottom: $larger-spacing;
     }
@@ -122,16 +150,12 @@ body {
     }
 }
 
-// ---------faculties section
+// ---------general section
 .page-section {
+
     h2 {
-        font-size: $header-large-vw;
-        line-height: $header-large-vw;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-align: center;
-        margin-bottom: $largest-spacing;
-        font-weight: $heavy;
+        @include h2-styles;
+        margin-bottom: $larger-spacing;
     }
 
     h3 {
@@ -150,14 +174,110 @@ body {
 
     .faculty-item {
 
+        padding: $large-spacing 0 $regular-spacing 0;
 
         img {
             max-width: 75px;
-            margin-bottom: $med-spacing;
+            margin-bottom: $regular-spacing;
         }
+    }
+}
 
-        h3 {
-            margin-bottom: $largest-spacing;
-        }
+// -----faculty pages
+
+// hero
+
+#page-header {
+    font-size: 25vw;
+    line-height: 25vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 900;
+    // text-shadow: -1px -1px 0 #1a1a1882, 1px -1px 0 #1a1a1882, -1px 1px 0 #1a1a1882, 1px 1px 0 #1a1a1882;
+}
+
+#faculty-icon-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+
+    #icon-header {
+        width: 100%;
+        max-width: 90vw;
+        margin-bottom: 35px;
+        position: relative;
+        top: -16vw;
+        transform: rotate(-10deg);
+        left: -20vw;
+        z-index: -99;
+        opacity: 0.3;
+    }
+}
+
+
+#student-page {
+    text-align: center;
+
+    h2 {
+        @include h2-styles;
+        margin-bottom: $large-spacing;
+    }
+
+    #student-name {
+        margin-bottom: $large-spacing;
+        font-size: 14vw;
+    }
+
+    #student-details {
+        margin-bottom: $large-spacing;
+        position: relative;
+    }
+
+    #student-headshot {
+        width: 100%;
+        margin-bottom: $section-spacing;
+    }
+
+    #breadcrumbs {
+        text-align: center;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        background: $pink;
+        padding: 5px 10px;
+        border-radius: 5px;
+        position: relative;
+        top: -20px;
+    }
+}
+
+.student-container {
+    margin-bottom: $regular-spacing;
+    text-align: center;
+
+    h4 {
+        @include h4-styles;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.project-container {
+    .project-item {
+        margin-bottom: $large-spacing;
+    }
+
+    .project-image {
+        width: 80%;
+    }
+
+    h4 {
+        @include h4-styles;
     }
 }
