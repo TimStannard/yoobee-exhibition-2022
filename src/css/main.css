@@ -393,16 +393,17 @@ body {
 }
 #student-page #breadcrumbs {
   text-align: center;
-  color: #FFFFFF;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
   display: inline-block;
-  background: #ea2b7b;
+  background: #FCEE1F;
   padding: 5px 10px;
   border-radius: 5px;
   position: relative;
   top: -20px;
+  box-shadow: 3px 3px 0px 1px #8338ec;
 }
 
 .student-container {
@@ -416,9 +417,10 @@ body {
   display: inline-block;
   margin: 0 auto;
   padding: 8px 12px;
-  background: #FCEE1F;
-  color: black;
+  background: #8338ec;
+  color: white;
   font-weight: 400;
+  border-radius: 5px;
 }
 .student-container img {
   width: 80%;
@@ -437,9 +439,10 @@ body {
   display: inline-block;
   margin: 0 auto;
   padding: 8px 12px;
-  background: #FCEE1F;
-  color: black;
+  background: #8338ec;
+  color: white;
   font-weight: 400;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 780px) {
