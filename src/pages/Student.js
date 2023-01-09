@@ -6,6 +6,8 @@ import { useParams, Link } from "react-router-dom";
 import { webData } from '../data/webStudentData';
 // images
 import bubble from '../img/bubble.svg';
+// icons
+import { ArrowLeft, GitHub, Linkedin, GlobeAsiaAustralia } from 'react-bootstrap-icons';
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,6 +27,8 @@ const useStudentData = (type) => {
                 return currentStudent.name;
             } else if (type === "headshot") {
                 return currentStudent.headshot;
+            } else if (type === "socials") {
+                return currentStudent.social_media;
             }
         }
     }
@@ -37,7 +41,7 @@ const Projects = ({ openModal, setProject }) => {
 
     // get projects
     const projects = useStudentData("projects");
-    const renderedProjects = projects.map((project, index) => {
+    const mappedProjects = projects.map((project, index) => {
         return (
             <div className="project-item" key={index} onClick={() => {
                 console.log("clicked")
@@ -55,9 +59,13 @@ const Projects = ({ openModal, setProject }) => {
 
     return (
         <div className="project-container">
-            {renderedProjects}
+            {mappedProjects}
         </div>
     )
+}
+
+const SocialMediaLinks = () => {
+
 }
 
 const Student = () => {
@@ -101,8 +109,14 @@ const Student = () => {
                 <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{useStudentData("name")}</h1>
             </div>
             <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={useStudentData("headshot")} alt={useStudentData("name") + " headshot"} />
-            <h2 data-aos="zoom-out" data-aos-delay="150">Projects</h2>
+            <div data-aos="zoom-out" data-aos-delay="150">
+                <SocialMediaLinks />
+            </div>
+            <h2 data-aos="zoom-out" data-aos-delay="200">Projects</h2>
             <Projects openModal={setModal} setProject={updateProject} />
+            <Link to="/WebUx">
+                <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Web & UX</button>
+            </Link>
             {modalOpen && <ProjectModal currentProject={project} closeMethod={setModal} currentSlug={slug} />}
         </div>
     )

@@ -4,9 +4,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #000000bf;
-    padding: 30vw 30px;
-    backdrop-filter: blur(40px);
+    background: rgb(0 0 0 / 70%);
+    padding: 25vw 30px;
+    backdrop-filter: blur(25px);
 
     h1 {
         font-size: $header-largest-vw;
@@ -15,7 +15,7 @@
     }
 
     p {
-        margin-bottom: $larger-spacing;
+        margin-bottom: $largest-spacing;
     }
 
     #modal-close {
@@ -30,10 +30,13 @@
     .project-mockup-image {
         width: 100%;
         margin-bottom: $largest-spacing;
+    }
 
-        &:last-of-type {
-            margin-bottom: 150px;
-        }
+    #end-divider {
+        width: 10vw;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.361);
+        margin: $largest-spacing auto 47.5vw auto;
     }
 
 }

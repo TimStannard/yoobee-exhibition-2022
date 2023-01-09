@@ -1,0 +1,32 @@
+// mixins
+
+@mixin h2-styles {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: $larger-spacing;
+    font-weight: $heavy;
+    font-size: $header-large-vw;
+}
+
+@mixin h4-styles {
+    font-size: $subheader-small-vw;
+    position: relative;
+    top: -22px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 12px;
+    background: $purple;
+    // box-shadow: inset -4px -2px 20px 0px $pink;
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+@mixin button-styles {
+    font-size: $button-regular;
+    background: $black;
+    font-weight: 500;
+    padding: $small-spacing;
+    border-radius: $small-radius;
+}
