@@ -4,10 +4,16 @@ export const webData = [
         name: "Molly Thompson",
         headshot: "/student-images/web-ux/headshots/molly.jpg",
         projectImagePath: "/student-images/web-ux/projects/molly/",
-        social_media: {
-            github: "mollytxox",
-            portfolio: "https://molly-portfolio.vercel.app/"
-        },
+        social_media: [
+            {
+                type: "github",
+                link: "mollytxox"
+            },
+            {
+                type: "portfolio",
+                link: "https://molly-portfolio.vercel.app/"
+            }
+        ],
         projects: [
             {
                 title: "Thompson Electrical",
@@ -51,11 +57,20 @@ export const webData = [
         name: "Rebekah Foley-Read",
         headshot: "/student-images/web-ux/headshots/rebekah.jpg",
         projectImagePath: "/student-images/web-ux/projects/rebekah/",
-        social_media: {
-            linkedin: "rebekah-foley-read-930051212",
-            github: "Rebscallion",
-            portfolio: "https://rebscallion.github.io/"
-        },
+        social_media: [
+            {
+                type: "github",
+                link: "Rebscallion"
+            },
+            {
+                type: "linkedin",
+                link: "rebekah-foley-read-930051212"
+            },
+            {
+                type: "portfolio",
+                link: "https://rebscallion.github.io/"
+            }
+        ],
         projects: [
             {
                 title: "Holloware",
@@ -102,9 +117,12 @@ export const webData = [
         name: "Dow Dodds",
         headshot: "/student-images/web-ux/headshots/dow.jpg",
         projectImagePath: "/student-images/web-ux/projects/dow/",
-        social_media: {
-            github: "Dow-Dodds"
-        },
+        social_media: [
+            {
+                type: "github",
+                link: "Dow-Dodds"
+            }
+        ],
         projects: [
             {
                 title: "Kindred",
@@ -141,7 +159,7 @@ export const webData = [
             },
             {
                 title: "Eco NZ",
-                desc: "Environmental Protextion and Awarn. React/Wordpress/Node",
+                desc: "Environmental Protection and Awareness. React/Wordpress/Node",
                 images: [
                     "eco-1.jpg",
                     "eco-2.jpg",

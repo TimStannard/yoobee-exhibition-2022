@@ -32,6 +32,10 @@ body {
     overflow: hidden;
 }
 
+img {
+    border-radius: 2px;
+}
+
 // ---------navbar
 
 #logo {
@@ -209,7 +213,7 @@ body {
 
     h2 {
         @include h2-styles;
-        margin-bottom: $largest-spacing;
+        margin-bottom: $larger-spacing;
     }
 
     #student-name {
@@ -224,7 +228,7 @@ body {
 
     #student-headshot {
         width: 100%;
-        margin-bottom: $section-spacing;
+        margin-bottom: $regular-spacing;
     }
 
     #breadcrumbs {
@@ -244,6 +248,25 @@ body {
 
     #student-page-button {
         margin: $med-spacing 0 $large-spacing 0;
+    }
+
+    #socials-container {
+        margin-bottom: $large-section-spacing;
+
+        .social-icon {
+            color: $yellow;
+            font-size: $icon-mobile-social;
+            margin-right: 10px;
+        }
+
+        .social-tag {
+            color: $yellow;
+            position: relative;
+            top: -9px;
+            border: 1px solid $yellow;
+            border-radius: 5px;
+            padding: 6px;
+        }
     }
 }
 

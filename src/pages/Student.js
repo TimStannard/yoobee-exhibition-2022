@@ -7,66 +7,14 @@ import { webData } from '../data/webStudentData';
 // images
 import bubble from '../img/bubble.svg';
 // icons
-import { ArrowLeft, GitHub, Linkedin, GlobeAsiaAustralia } from 'react-bootstrap-icons';
+import { ArrowLeft } from 'react-bootstrap-icons';
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// get modal
+// get components
 import ProjectModal from "../components/ProjectModal"
-
-const useStudentData = (type) => {
-    const params = useParams();
-    const slug = params.name;
-
-    for (let i = 0; i < webData.length; i++) {
-        if (webData[i].slug === slug) {
-            const currentStudent = webData[i];
-            if (type === "projects") {
-                return currentStudent.projects;
-            } else if (type === "name") {
-                return currentStudent.name;
-            } else if (type === "headshot") {
-                return currentStudent.headshot;
-            } else if (type === "socials") {
-                return currentStudent.social_media;
-            }
-        }
-    }
-}
-
-const Projects = ({ openModal, setProject }) => {
-    // get the slug
-    const params = useParams();
-    const slug = params.name;
-
-    // get projects
-    const projects = useStudentData("projects");
-    const mappedProjects = projects.map((project, index) => {
-        return (
-            <div className="project-item" key={index} onClick={() => {
-                console.log("clicked")
-                console.log(project)
-                setProject(project);
-                openModal();
-            }}>
-                <img data-aos="zoom-in" className="project-image" src={"/student-images/web-ux/projects/" + slug + "/" + project.images[0]} alt={project.title + "screenshot"} />
-                <h4 data-aos="zoom-in">
-                    {project.title}
-                </h4>
-            </div>
-        )
-    })
-
-    return (
-        <div className="project-container">
-            {mappedProjects}
-        </div>
-    )
-}
-
-const SocialMediaLinks = () => {
-
-}
+import { Projects } from "../components/Projects"
+import { SocialMediaLinks } from "../components/SocialMediaLinks"
 
 const Student = () => {
     const params = useParams();
@@ -82,9 +30,24 @@ const Student = () => {
         });
     }, [])
 
+    // -----states
+    // student data
+    const [studentData, updateStudentData] = useState({});
+    const [loading, setLoading] = useState(true);
     // our states for modal
     const [modalOpen, toggleModal] = useState(false)
     const [project, updateProject] = useState({})
+
+    // grab student data
+    useEffect(() => {
+        for (let i = 0; i < webData.length; i++) {
+            if (webData[i].slug === slug) {
+                const currentStudent = webData[i];
+                updateStudentData(currentStudent);
+                setLoading(false);
+            }
+        }
+    }, []);
 
     // function to toggle the modal
     const setModal = () => {
@@ -92,7 +55,6 @@ const Student = () => {
         // toggle no scroll on body
         document.body.classList.toggle('no-scroll');
     }
-
 
     return (
         <div id="student-page" className="page-container container-lg">
@@ -106,14 +68,14 @@ const Student = () => {
                 <Link to="/WebUx">
                     <div id="breadcrumbs" data-aos="zoom-out">Web & UX</div>
                 </Link>
-                <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{useStudentData("name")}</h1>
+                <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{studentData.name}</h1>
             </div>
-            <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={useStudentData("headshot")} alt={useStudentData("name") + " headshot"} />
-            <div data-aos="zoom-out" data-aos-delay="150">
-                <SocialMediaLinks />
+            <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
+            <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
+                {!loading && <SocialMediaLinks student={studentData} />}
             </div>
             <h2 data-aos="zoom-out" data-aos-delay="200">Projects</h2>
-            <Projects openModal={setModal} setProject={updateProject} />
+            {!loading && <Projects student={studentData} openModal={setModal} setProject={updateProject} />}
             <Link to="/WebUx">
                 <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Web & UX</button>
             </Link>

@@ -185,7 +185,12 @@
   color: #FCEE1F;
 }
 #modal p {
-  margin-bottom: 60px;
+  margin-bottom: 35px;
+  padding: 20px 20px;
+  background: #8338ec;
+  line-height: 24px;
+  text-align: left;
+  border-radius: 5px;
 }
 #modal #modal-close {
   z-index: 2;
@@ -235,6 +240,10 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+img {
+  border-radius: 2px;
 }
 
 #logo {
@@ -395,7 +404,7 @@ body {
   margin-bottom: 35px;
   font-weight: 900;
   font-size: 10vw;
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 #student-page #student-name {
   margin-bottom: 30px;
@@ -407,7 +416,7 @@ body {
 }
 #student-page #student-headshot {
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 15px;
 }
 #student-page #breadcrumbs {
   text-align: center;
@@ -425,6 +434,22 @@ body {
 }
 #student-page #student-page-button {
   margin: 25px 0 30px 0;
+}
+#student-page #socials-container {
+  margin-bottom: 85px;
+}
+#student-page #socials-container .social-icon {
+  color: #FCEE1F;
+  font-size: 8vw;
+  margin-right: 10px;
+}
+#student-page #socials-container .social-tag {
+  color: #FCEE1F;
+  position: relative;
+  top: -9px;
+  border: 1px solid #FCEE1F;
+  border-radius: 5px;
+  padding: 6px;
 }
 
 .student-container {
