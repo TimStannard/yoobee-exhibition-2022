@@ -348,6 +348,10 @@ img {
   margin-bottom: 60px;
 }
 
+#hero-squiggle {
+  display: none;
+}
+
 #main #hero {
   text-align: center;
   margin-bottom: 70px;
@@ -355,6 +359,7 @@ img {
 #main #hero #home-logo {
   width: 95%;
   margin-bottom: 35px;
+  max-width: 580px;
 }
 
 #featured {
@@ -536,6 +541,23 @@ img {
           backdrop-filter: blur(12px);
 }
 
+@media screen and (min-width: 530px) {
+  .page-section h2 {
+    font-size: 40px;
+  }
+  .page-section h3 {
+    font-size: 35px;
+    line-height: 8.5vw;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .bubble {
+    height: 200vh;
+  }
+}
 @media screen and (min-width: 780px) {
   .container-lg {
     padding: 30px;
@@ -580,8 +602,60 @@ img {
   }
 }
 /* Desktop queries */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
+  h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    text-align: left;
+  }
+  .container-lg {
+    padding: 40px 60px;
+  }
+  #topnav {
+    padding: 30px 40px;
+  }
+  #bubble-1 img {
+    top: -10vw;
+    right: -31vw;
+  }
   #tagline {
-    font-size: 45px;
+    max-width: 650px;
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 35px;
+  }
+  #hero-squiggle {
+    display: block;
+  }
+  #hero-squiggle img {
+    transform: rotate(13deg);
+    width: 28vw;
+    max-width: 315px;
+    position: relative;
+    left: 150px;
+    top: 0.95vh;
+  }
+  #main #hero {
+    text-align: left;
+    height: 80vh;
+  }
+  #main #hero #home-logo {
+    width: 95%;
+    margin-bottom: 35px;
+    max-width: 720px;
+  }
+  .arrow-down {
+    display: none;
+  }
+  .page-section h2 {
+    text-align: left;
+    letter-spacing: -1px;
+    font-size: 10vw;
+    line-height: 8vw;
+    margin-bottom: 80px;
+    padding-top: 60px;
   }
 }

@@ -1,5 +1,52 @@
 /* Desktop queries */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
+
+    // typography
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        text-align: left;
+    }
+
+    // general elements
+
+    .container-lg {
+        padding: 40px 60px;
+    }
+
+    #topnav {
+        padding: 30px 40px;
+    }
+
+    #bubble-1 img {
+        top: -10vw;
+        right: -31vw;
+    }
+
+
+    #tagline {
+        max-width: 650px;
+        font-size: $tagline-med;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    #hero-squiggle {
+        display: block;
+
+        img {
+            transform: rotate(13deg);
+            width: 28vw;
+            max-width: 315px;
+            position: relative;
+            left: 150px;
+            top: 0.95vh;
+        }
+
+    }
 
     // .item-container {
     //     display: grid;
@@ -8,7 +55,36 @@
     // }
     // home
 
-    #tagline {
-        font-size: $paragraph-lg;
+
+    #main {
+        #hero {
+            text-align: left;
+            height: 80vh;
+
+            #home-logo {
+                width: 95%;
+                margin-bottom: 35px;
+                max-width: 720px;
+            }
+        }
     }
+
+    .arrow-down {
+        display: none;
+    }
+
+    // headers
+
+    .page-section {
+        h2 {
+            text-align: left;
+            letter-spacing: -1px;
+            font-size: 10vw;
+            line-height: 8vw;
+            margin-bottom: 80px;
+            padding-top: 60px;
+        }
+
+    }
+
 }

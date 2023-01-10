@@ -1,6 +1,6 @@
 // dependencies
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper';
@@ -14,7 +14,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const RandomStudentSlides = () => {
-
     // get all web students
     const webStudents = webData.map((student) => {
         student.faculty = "webUx";
@@ -66,7 +65,28 @@ const RandomStudentSlides = () => {
             </SwiperSlide>
         )
     })
+
     const SwiperSlides = () => {
+        // setup state to store window size
+        const [windowSize, setWindowSize] = useState(getWindowSize());
+        // listen for window size change
+        useEffect(() => {
+            function handleWindowResize() {
+                setWindowSize(getWindowSize());
+            }
+
+            window.addEventListener('resize', handleWindowResize);
+
+            return () => {
+                window.removeEventListener('resize', handleWindowResize);
+            };
+        }, []);
+
+        function getWindowSize() {
+            const { innerWidth, innerHeight } = window;
+            return { innerWidth, innerHeight };
+        }
+
         return (
             <Swiper
                 id="swiper-featured"

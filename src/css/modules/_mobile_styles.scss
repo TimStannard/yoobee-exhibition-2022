@@ -113,6 +113,7 @@ img {
     }
 }
 
+
 // hero
 
 #tagline {
@@ -122,6 +123,10 @@ img {
     margin-bottom: $largest-spacing;
 }
 
+#hero-squiggle {
+    display: none;
+}
+
 #main #hero {
     text-align: center;
     margin-bottom: $section-spacing;
@@ -129,6 +134,7 @@ img {
     #home-logo {
         width: 95%;
         margin-bottom: $larger-spacing;
+        max-width: 580px;
     }
 }
 

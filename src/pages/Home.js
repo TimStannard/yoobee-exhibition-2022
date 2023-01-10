@@ -8,6 +8,7 @@ import StudentSpotlight from "../components/StudentSpotlight";
 import { Link } from "react-router-dom";
 // images
 import bubble from '../img/bubble.svg';
+import squiggle from '../img/squiggle.svg';
 import heroLogo from '../img/hero-logo-reversed.svg';
 // icons
 import { ArrowDownCircle } from 'react-bootstrap-icons';
@@ -81,15 +82,18 @@ const Home = () => {
                     <p id="tagline" data-aos="zoom-out" data-aos-delay="50" >
                         A showcase of our graduating students’ postgraduate work — in Web & UX design, Animation, and Film.
                     </p>
-                    <button className="arrow-down" data-aos="zoom-out" data-aos-delay="100" ref={ref} onClick={handleScroll}>
+                    <div id="hero-squiggle" data-aos="fade-in" data-aos-delay="200" data-aos-duration="1500">
+                        <img src={squiggle} alt="white squiggle pointing to next section" />
+                    </div>
+                    <button className="arrow-down" data-aos="zoom-out" data-aos-delay="100" data-aos-anchor=".container-lg" onClick={handleScroll}>
                         <ArrowDownCircle />
                     </button>
                 </div>
                 <div id="featured" className="page-section">
-                    <h2 data-aos="zoom-out-down" data-aos-delay="150">Student Spotlight</h2>
+                    <h2 data-aos="zoom-out-down" data-aos-delay="150" ref={ref}>Student Spotlight</h2>
                     <StudentSpotlight />
                     <Link to={randomStudentLink()}>
-                        <button data-aos="zoom-out-down" className="button regular">View random student 👀</button>
+                        <button data-aos="zoom-out-down" className="button regular">View a random student 👀</button>
                     </Link>
                 </div>
                 <div id="bubble-2" className="bubble">
