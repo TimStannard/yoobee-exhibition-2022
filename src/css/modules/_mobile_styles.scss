@@ -8,6 +8,7 @@ h4,
 p {
     text-align: center;
     color: $white;
+    overflow-wrap: break-word;
 }
 
 a {
@@ -136,7 +137,7 @@ img {
     margin-bottom: $max-spacing;
     text-align: center;
 
-    #featured-projects {
+    #student-spotlight {
         padding-bottom: $larger-spacing;
     }
 }
@@ -202,7 +203,7 @@ img {
         transform: rotate(-10deg);
         left: -20vw;
         z-index: -99;
-        opacity: 0.3;
+        opacity: 0.6;
     }
 }
 
@@ -218,7 +219,7 @@ img {
 
     #student-name {
         margin-bottom: $large-spacing;
-        font-size: 14vw;
+        font-size: $student-name-mobile;
     }
 
     #student-details {
@@ -268,6 +269,18 @@ img {
             padding: 6px;
         }
     }
+
+    &.film-tv {
+        p {
+            margin-bottom: $large-spacing;
+            line-height: 24px;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin-bottom: $large-spacing;
+        }
+    }
 }
 
 .student-container {
@@ -276,6 +289,12 @@ img {
 
     h4 {
         @include h4-styles;
+
+        &.film-student {
+            width: 90%;
+            position: static;
+            box-sizing: border-box;
+        }
     }
 
     img {

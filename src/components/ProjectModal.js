@@ -11,8 +11,10 @@ const ProjectModal = ({ currentProject, closeMethod, currentSlug }) => {
     return (
         <div id="modal">
             <h1 data-aos="zoom-out-down">{currentProject.title}</h1>
-            <p data-aos="zoom-out">{currentProject.desc}</p>
+            <h3 data-aos="zoom-out">About</h3>
+            <p className="p-description" data-aos="zoom-out">{currentProject.desc}</p>
             <div id="project-gallery">
+                <h3 data-aos="zoom-out">Gallery</h3>
                 {renderedImages}
             </div>
             <button className="button go-back" onClick={closeMethod} data-aos="zoom-out-up"><ArrowLeft /> Go back</button>

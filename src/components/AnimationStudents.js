@@ -1,12 +1,12 @@
 // dependencies
 import { Link } from "react-router-dom"
 // student data
-import { webData } from '../data/webStudentData';
+import { animationData } from '../data/animationStudentData';
 
 const Students = () => {
-    const mappedStudents = webData.map((student, index) => {
+    const mappedStudents = animationData.map((student, index) => {
         return (
-            <Link className="post-link" to={`/webUx/student/${student.slug}`} key={index} data-aos="zoom-out-down">
+            <Link className="post-link" to={`/animation/student/${student.slug}`} key={index} data-aos="zoom-out-down">
                 <div className="student-container">
                     <img src={student.headshot} alt={student.name + " headshot"} />
                     <h4 className="name">{student.name}</h4>
@@ -17,8 +17,8 @@ const Students = () => {
     return mappedStudents;
 }
 
-const WebUxStudents = () => {
+const AnimationStudents = () => {
     return <Students />
 }
 
-export default WebUxStudents
+export default AnimationStudents

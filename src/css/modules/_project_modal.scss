@@ -10,14 +10,14 @@
 
     h1 {
         font-size: $header-largest-vw;
-        margin-bottom: $larger-spacing;
+        margin-bottom: $largest-spacing;
         color: $yellow;
+        text-transform: uppercase;
     }
 
     p {
-        margin-bottom: 35px;
+        margin-bottom: $large-spacing;
         padding: 20px 20px;
-        // background: #5e5e5e63;
         background: $purple;
         line-height: 24px;
         text-align: left;
@@ -44,5 +44,11 @@
         background: rgba(255, 255, 255, 0.361);
         margin: $largest-spacing auto 47.5vw auto;
     }
+
+    h3 {
+        margin-bottom: $regular-spacing;
+        color: $yellow;
+    }
+
 
 }

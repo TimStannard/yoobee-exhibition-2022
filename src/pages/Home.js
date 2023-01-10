@@ -3,7 +3,7 @@
 // hooks
 import { useEffect, useRef } from "react";
 // components
-import FeaturedProjects from "../components/FeaturedProjects";
+import StudentSpotlight from "../components/StudentSpotlight";
 // routing
 import { Link } from "react-router-dom";
 // images
@@ -54,9 +54,9 @@ const Home = () => {
                     </button>
                 </div>
                 <div id="featured" className="page-section">
-                    <h2 data-aos="zoom-out-down" data-aos-delay="150">Featured Projects</h2>
-                    <FeaturedProjects />
-                    <button data-aos="zoom-out-down" className="button regular">View all projects 👀</button>
+                    <h2 data-aos="zoom-out-down" data-aos-delay="150">Student Spotlight</h2>
+                    <StudentSpotlight />
+                    <button data-aos="zoom-out-down" className="button regular">View random student 👀</button>
                 </div>
                 <div id="bubble-2" className="bubble">
                     <img src={bubble} alt="colourful bubble background decal" />
@@ -71,16 +71,20 @@ const Home = () => {
                                 <h3 data-aos="zoom-out">Web & UX</h3>
                             </div>
                         </Link>
-                        <div className="faculty-item">
-                            <img src={animationIcon} alt="icon Animation" data-aos="zoom-out" />
-                            <h3 data-aos="zoom-out">Animation</h3>
-                        </div>
+                        <Link to="/animation">
+                            <div className="faculty-item">
+                                <img src={animationIcon} alt="icon Animation" data-aos="zoom-out" />
+                                <h3 data-aos="zoom-out">Animation</h3>
+                            </div>
+                        </Link>
                     </div>
                     <div className="faculty-row">
-                        <div className="faculty-item">
-                            <img src={filmIcon} alt="icon film television" data-aos="zoom-out" />
-                            <h3 data-aos="zoom-out">Film and Television</h3>
-                        </div>
+                        <Link to="/film">
+                            <div className="faculty-item">
+                                <img src={filmIcon} alt="icon film television" data-aos="zoom-out" />
+                                <h3 data-aos="zoom-out">Film and Television</h3>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

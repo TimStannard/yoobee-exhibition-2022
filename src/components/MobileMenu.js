@@ -30,12 +30,16 @@ const MobileMenu = ({ closeMethod }) => {
                         </Link>
                     </li>
                     <li data-aos="zoom-out" data-aos-delay="50">
-                        <img src={animationIcon} alt="icon animation" />
-                        <Link to="/artists">Animation</Link>
+                        <Link to="/animation" onClick={closeMethod}>
+                            <img src={animationIcon} alt="icon animation" />
+                            <div>Animation</div>
+                        </Link>
                     </li>
                     <li data-aos="zoom-out-up" data-aos-delay="100">
-                        <img src={filmIcon} alt="icon film" />
-                        <Link to="/shop">Film & Television</Link>
+                        <Link to="/film" onClick={closeMethod}>
+                            <img src={filmIcon} alt="icon film" />
+                            <div>Film & Television</div>
+                        </Link>
                     </li>
                 </ul>
             </div>

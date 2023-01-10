@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 // icons
 import { ArrowDownCircle } from 'react-bootstrap-icons';
-import FilmIcon from '../img/film-icon.svg';
+import AnimationIcon from '../img/animation-icon.svg';
 // components
-import FilmStudents from "../components/FilmStudents";
+import AnimationStudents from "../components/AnimationStudents";
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -35,10 +35,10 @@ const WebUx = () => {
             <div id="main" className="container-lg">
                 <div id="hero">
                     <div id="faculty-icon-container" data-aos="fade-in" data-aos-delay="50">
-                        <img src={FilmIcon} data-aos="zoom-out" data-aos-delay="50" id="icon-header" alt="web ux icon" />
+                        <img src={AnimationIcon} data-aos="zoom-out" data-aos-delay="50" id="icon-header" alt="web ux icon" />
                     </div>
                     <h1 id="page-header" data-aos="zoom-out" >
-                        Film and TV
+                        Animation
                     </h1>
                     <button className="arrow-down" data-aos="zoom-out" data-aos-delay="100" ref={ref} onClick={handleScroll}>
                         <ArrowDownCircle />
@@ -47,7 +47,7 @@ const WebUx = () => {
                 <div id="students-list" className="page-section">
                     <h2 data-aos="zoom-out-down" data-aos-delay="150">Students</h2>
                     <div>
-                        <FilmStudents />
+                        <AnimationStudents />
                     </div>
 
                 </div>
