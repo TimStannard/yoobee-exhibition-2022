@@ -22,9 +22,24 @@ const Footer = () => {
                     </li>
                 </ul>
             </div><div className="footer-section">
-                <ul>
-                    <li>Link</li>
-                    <li>Link</li>
+                <h5>Faculties</h5>
+                <div className="grey-heading-divider"></div>
+                <ul id="footer-faculties">
+                    <li>
+                        <Link to="/webUx">
+                            Web & UX
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/animation">
+                            Animation
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/film">
+                            Film & Television
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div id="bottom-bar">

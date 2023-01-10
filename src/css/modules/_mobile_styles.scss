@@ -84,7 +84,7 @@ img {
 .bubble {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 150vw);
     overflow: hidden;
     z-index: -99;
 
@@ -229,7 +229,7 @@ img {
 
     #student-headshot {
         width: 100%;
-        margin-bottom: $regular-spacing;
+        margin-bottom: $med-spacing;
     }
 
     #breadcrumbs {

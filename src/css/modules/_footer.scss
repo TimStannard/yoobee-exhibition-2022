@@ -1,12 +1,21 @@
 #footer {
     text-align: center;
     background: black;
-    color: $white;
-    padding: $largest-spacing $large-spacing;
-    border-top: 1px solid #373737;
+    padding: $largest-spacing $large-spacing $large-spacing $large-spacing;
+    border-top: 1px solid $footer-grey-border;
+
+    h5 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #f2f2f2;
+    }
+
+    #footer-faculties {
+        margin-bottom: $largest-spacing;
+    }
 
     a {
-        color: $white;
+        color: #dfdfdf;
     }
 
     li {
@@ -18,8 +27,23 @@
         margin-bottom: $med-spacing;
     }
 
+    #yoobee-logo {
+        margin-bottom: $larger-spacing;
+    }
+
+    .grey-heading-divider {
+        width: 15%;
+        height: 1px;
+        margin: $small-spacing auto $regular-spacing auto;
+        background: $footer-grey-border;
+
+    }
+
     #bottom-bar {
         font-size: $paragraph-small;
+        border-top: 1px solid $footer-grey-border;
+        padding-top: $regular-spacing;
+        color: #828282;
     }
 
 }

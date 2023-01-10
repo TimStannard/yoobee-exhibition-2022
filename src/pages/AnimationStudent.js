@@ -59,8 +59,8 @@ const Student = () => {
             <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
             <h2 data-aos="zoom-out" data-aos-delay="200">{studentData.project}</h2>
             {/* image */}
-            <h4>Showreel</h4>
-            <video width="100%" height="240" controls autoPlay>
+            <h4 data-aos="zoom-out" data-aos-delay="250">Showreel</h4>
+            <video width="100%" height="240" controls data-aos="zoom-out" data-aos-delay="300">
                 <source src={`http://ignite.yoobeestudent.net/${slug}.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

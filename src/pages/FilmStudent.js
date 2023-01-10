@@ -62,10 +62,8 @@ const Student = () => {
                 {!loading && <SocialMediaLinks student={studentData} />}
             </div>
             <h2 data-aos="zoom-out" data-aos-delay="200">Project: {studentData.project}</h2>
-            {/* image */}
-            <h4>Role</h4>
-            <p className="p-description" data-aos="zoom-out">{studentData.role}</p>
-            {/* <h4>Gallery</h4> */}
+            <h4 data-aos="zoom-out" data-aos-delay="250">Role</h4>
+            <p className="p-description" data-aos="zoom-out" data-aos-delay="300">{studentData.role}</p>
             <Link to="/film">
                 <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Film and TV</button>
             </Link>

@@ -1,3 +1,5 @@
+// dependencies
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,64 +17,57 @@ const RandomStudentSlides = () => {
 
     // get all web students
     const webStudents = webData.map((student) => {
+        student.faculty = "webUx";
         return student;
     })
+    // get all animation students
     const animationStudents = animationData.map((student) => {
+        student.faculty = "animation";
         return student;
     })
 
     const allStudents = [...webStudents, ...animationStudents];
 
-    console.log(allStudents);
-    // // get projects from each web student
-    // const webProjectArrays = webData.map((student) => {
-    //     return student.projects;
-    // })
-    // // combine the arrays of projects into one
-    // const allWebProjects = Object.values(webProjectArrays).flat();
-    // const randomProjectIndexes = [];
-    // // generate random number to choose a random project
-    // for (let i = 0; i < 3; i++) {
-    //     let randomUniqueNumber = Math.floor(Math.random() * allWebProjects.length - 1) + 1;
-    //     // check if random number exists
-    //     if (randomProjectIndexes.length > 0) {
-    //         // run through random number array
-    //         for (let i = 0; i < randomProjectIndexes.length; i++) {
-    //             // check if current iteration of random number array is equal to new generated number
-    //             if (randomUniqueNumber == randomProjectIndexes[i]) {
-    //                 // if equal, regenerate random number
-    //                 // console.log("detected double up of " + randomUniqueNumber + " and " + randomProjectIndexes[i]);
-    //                 randomUniqueNumber = Math.floor(Math.random() * allWebProjects.length - 1) + 1;
-    //             };
-    //         }
-    //     }
-    //     randomProjectIndexes.push(randomUniqueNumber);
-    // }
-    // // put random projects into a new array based on looping through the random indexes
-    // const randomProjects = [];
-    // for (let i = 0; i < randomProjectIndexes.length; i++) {
-    //     randomProjects.push(allWebProjects[randomProjectIndexes[i]]);
-    // }
+    const randomStudentIndexes = [];
+    // generate random number to choose a random student
+    for (let i = 0; i < 3; i++) {
+        let randomUniqueNumber = Math.floor(Math.random() * allStudents.length - 1) + 1;
+        // check if random number exists
+        if (randomStudentIndexes.length > 0) {
+            // run through random number array
+            for (let i = 0; i < randomStudentIndexes.length; i++) {
+                // check if current iteration of random number array is equal to new generated number
+                if (randomUniqueNumber == randomStudentIndexes[i]) {
+                    // if equal, regenerate random number
+                    // note: check for double ups
+                    // console.log("detected double up of " + randomUniqueNumber + " and " + randomStudentIndexes[i]);
+                    randomUniqueNumber = Math.floor(Math.random() * allStudents.length - 1) + 1;
+                    // reset loop
+                    i = -1;
+                };
+            }
+        }
+        randomStudentIndexes.push(randomUniqueNumber);
+    }
 
-    // // console.log(randomProjects);
+    // put random students into a new array based on looping through the random indexes
+    const randomStudents = [];
+    for (let i = 0; i < randomStudentIndexes.length; i++) {
+        randomStudents.push(allStudents[randomStudentIndexes[i]]);
+    }
+
     // // map to show random projects in a swiper slide
-    // const mappedRandomProjects = randomProjects.map((project, index) => {
-    //     return <SwiperSlide key={index}><img src={project.images[0]} /></SwiperSlide>
-    //     // {"/student-images/web-ux/projects/" + student.slug + "/" + project.images[0]} alt={project.title + "screenshot"}
-    // })
-    // return mappedRandomStudents;
-}
-
-const StudentSpotlight = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 400,
-            easing: 'ease-in-out-back'
-        });
-    }, [])
-    // randomiseProjects();
-    return (
-        <div id="student-spotlight" data-aos="zoom-out">
+    const mappedRandomStudents = randomStudents.map((student, index) => {
+        return (
+            <SwiperSlide key={index}>
+                <Link to={`/${student.faculty}/student/${student.slug}`}>
+                    <img src={student.headshot} className="swiper-image" alt={student.name + "headshot photo"} />
+                </Link>
+            </SwiperSlide>
+        )
+    })
+    const SwiperSlides = () => {
+        return (
             <Swiper
                 id="swiper-featured"
                 effect={"coverflow"}
@@ -93,8 +88,25 @@ const StudentSpotlight = () => {
                     slideShadows: true,
                 }}
             >
-                <RandomStudentSlides />
+                {mappedRandomStudents}
             </Swiper>
+
+        )
+    }
+    return <SwiperSlides />;
+}
+
+const StudentSpotlight = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 400,
+            easing: 'ease-in-out-back'
+        });
+    }, [])
+    // randomiseProjects();
+    return (
+        <div id="student-spotlight" data-aos="zoom-out">
+            <RandomStudentSlides />
         </div>
     )
 }
