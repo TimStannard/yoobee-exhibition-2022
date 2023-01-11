@@ -262,6 +262,10 @@
 
         #socials-container {
             text-align: left;
+            position: relative;
+            top: -28px;
+            left: 160px;
+            margin-bottom: $large-section-spacing;
 
             .social-icon {
                 font-size: 32px;
@@ -280,8 +284,11 @@
         #student-name {
             h1 {
                 margin-bottom: 0px;
-                font-size: 100px;
+                font-size: 70px;
                 display: inline-block;
+                position: relative;
+                top: -36px;
+                left: 28px;
             }
 
         }
@@ -297,12 +304,13 @@
         }
 
         #desktop-display-pic {
-            display: block;
+            display: inline-block;
             background-size: cover;
-            width: 250px;
-            height: 250px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            margin-bottom: $med-spacing;
+            position: relative;
+            top: 30px;
         }
 
         .project-container {
@@ -403,3 +411,9 @@
     }
 
 }
+
+// change this position on web ux student item page
+// #bubble-1 img {
+//     top: -43vw;
+//     left: -31vw;
+// }

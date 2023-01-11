@@ -65,14 +65,18 @@ const Student = () => {
                 <Link to="/WebUx">
                     <div id="breadcrumbs" data-aos="zoom-out">Web & UX</div>
                 </Link>
-                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">                <span id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></span>
+                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
+                    <span id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></span>
                     <h1>{studentData.name}</h1>
+                    <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
+                        {!loading && <SocialMediaLinks student={studentData} />}
+                    </div>
                 </div>
             </div>
             <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
-            <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
+            {/* <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
                 {!loading && <SocialMediaLinks student={studentData} />}
-            </div>
+            </div> */}
             <h2 data-aos="zoom-out" data-aos-delay="200">Projects</h2>
             {!loading && <Projects student={studentData} openModal={setModal} setProject={updateProject} />}
             <Link to="/WebUx">
