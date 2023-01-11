@@ -76,12 +76,6 @@
 
 // styles
 
-#test {
-    position: absolute;
-    top: 50px;
-    right: -100px;
-}
-
 #swiper-featured {
     transform: scale(1.20);
     padding: $regular-spacing 0;
@@ -125,8 +119,39 @@
             justify-content: center;
         }
     }
+}
 
+// styles for the description box on desktop
 
+#student-spotlight-description {
+    position: absolute;
+    top: 10vw;
+    right: -30vw;
+    text-align: left;
+    width: 30vw;
+
+    h4 {
+        margin-bottom: $large-spacing;
+        font-size: 2.5vw;
+    }
+
+    svg {
+        position: relative;
+        top: 3px;
+    }
+
+    p {
+        margin-bottom: $regular-spacing;
+        font-size: 18px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        background: $yellow;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 }
 
 @media screen and (min-width: 500px) {
@@ -179,4 +204,13 @@
         }
     }
 
+}
+
+/* 2k tv queries */
+@media screen and (min-width: 2000px) {
+    #student-spotlight-description {
+        p {
+            font-size: 1.25vw;
+        }
+    }
 }

@@ -32,8 +32,7 @@
                 color: black;
                 margin-left: 16px;
                 font-size: 18px;
-
-
+                font-weight: 500;
             }
 
             &:nth-of-type(1) a {
@@ -81,6 +80,13 @@
                 width: 75vw;
             }
         }
+    }
+
+    // faculty pages
+
+    #page-header {
+        font-size: 10vw;
+        line-height: 8vw;
     }
 
 }

@@ -53,11 +53,20 @@ img {
 
 .button {
     display: inline-block;
+    font-size: $button-regular;
 
     &.regular {
         @include button-styles;
         color: $white;
         border: 1px solid $white;
+    }
+
+    &.yellow {
+        @include button-styles;
+        color: $black;
+        background: $yellow;
+        font-weight: 500;
+        border: none;
     }
 
     &.go-back {
@@ -138,7 +147,7 @@ img {
     }
 }
 
-// ---------featured section
+// ---------spotlight section
 #featured {
     margin-bottom: $largest-spacing;
     text-align: center;
@@ -146,6 +155,10 @@ img {
     #student-spotlight {
         padding-bottom: $larger-spacing;
     }
+}
+
+#student-spotlight-description {
+    display: none;
 }
 
 // ---------general section
@@ -222,8 +235,11 @@ img {
     }
 
     #student-name {
-        margin-bottom: $large-spacing;
-        font-size: $student-name-mobile;
+        h1 {
+            margin-bottom: $large-spacing;
+            font-size: $student-name-mobile;
+        }
+
     }
 
     #student-details {
@@ -234,6 +250,10 @@ img {
     #student-headshot {
         width: 100%;
         margin-bottom: $med-spacing;
+    }
+
+    #desktop-display-pic {
+        display: none;
     }
 
     #breadcrumbs {

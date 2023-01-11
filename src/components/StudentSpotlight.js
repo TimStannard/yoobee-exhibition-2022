@@ -13,6 +13,8 @@ import 'swiper/swiper.min.css';
 import { randomStudentLink } from '../util/randomStudentLink';
 // images
 import mysteryStudentImage from "../img/mystery-student.jpg";
+// bootstrap icons
+import { ArrowRight, EyeFill } from "react-bootstrap-icons"
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -21,11 +23,13 @@ const RandomStudentSlides = () => {
     // get all web students
     const webStudents = webData.map((student) => {
         student.faculty = "webUx";
+        student.faculty_pretty_print = "Web & Ux";
         return student;
     })
     // get all animation students
     const animationStudents = animationData.map((student) => {
         student.faculty = "animation";
+        student.faculty_pretty_print = "Animation";
         return student;
     })
 
@@ -65,34 +69,34 @@ const RandomStudentSlides = () => {
                 <Link to={`/${student.faculty}/student/${student.slug}`}>
                     <img src={student.headshot} className="swiper-image" alt={student.name + "headshot photo"} />
                 </Link>
-                {/* <div className="desktop-spotlight-info">
-                    <h3>{student.name}</h3>
-                    <h4>{student.faculty}</h4>
-                </div> */}
             </SwiperSlide>
         )
     })
 
     const StudentDescriptions = ({ index }) => {
-        // console.log(randomStudents);
         let message = "";
         if (index <= 1) {
             message =
                 <>
+                    <div>
+                        <p>{randomStudents[index].faculty_pretty_print}</p>
+                    </div>
                     <h4>{randomStudents[index].name}</h4>
-                    <p>{randomStudents[index].faculty}</p>
-                    <button className="button regular">View my projects</button>
+                    <Link to={`/${randomStudents[index].faculty}/student/${randomStudents[index].slug}`}>
+                        <button className="button regular">View projects <EyeFill /></button>
+                    </Link>
                 </>;
         } else {
             message =
                 <>
                     <h4>Pick a random student</h4>
-                    <p>Choose a random student who is graduating this year!</p>
-                    <button className="button regular">Go</button>
+                    <Link to={randomStudentLink()}>
+                        <button className="button yellow">Go! <ArrowRight /></button>
+                    </Link>
                 </>;
         }
         return (
-            <div id="test">
+            <div id="student-spotlight-description">
                 {message}
             </div>
         )
@@ -118,7 +122,7 @@ const RandomStudentSlides = () => {
                         perSlideRotate: 3
                     }}
                     onSlideChange={(swiper) => {
-                        // get new index of swiper on change, send back to home component
+                        // get new index of swiper on change
                         setCurIndex(swiper.activeIndex);
                     }}
 

@@ -1,5 +1,3 @@
-
-// ----------imports
 // hooks
 import { useEffect, useRef } from "react";
 // icons
@@ -7,6 +5,7 @@ import { ArrowDownCircle } from 'react-bootstrap-icons';
 import webUxIcon from '../img/web-ux-icon.svg';
 // components
 import WebUxStudents from "../components/WebUxStudents";
+import bubble from "../img/bubble.svg";
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -41,13 +40,16 @@ const WebUx = () => {
                     <h1 id="page-header" data-aos="zoom-out" >
                         Web & UX
                     </h1>
+                    <div id="bubble-1" className="bubble faculty-page">
+                        <img src={bubble} alt="colourful bubble background decal" />
+                    </div>
                     <button className="arrow-down" data-aos="zoom-out" data-aos-delay="100" ref={ref} onClick={handleScroll}>
                         <ArrowDownCircle />
                     </button>
                 </div>
                 <div id="students-list" className="page-section">
                     <h2 data-aos="zoom-out-down" data-aos-delay="150">Students</h2>
-                    <div>
+                    <div id="all-students-container">
                         <WebUxStudents />
                     </div>
 

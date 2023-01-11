@@ -6,12 +6,12 @@ import { webData } from '../data/webStudentData';
 const Students = () => {
     const mappedStudents = webData.map((student, index) => {
         return (
-            <Link className="post-link" to={`/webUx/student/${student.slug}`} key={index} data-aos="zoom-out-down">
-                <div className="student-container">
+            <div className="student-container" key={index} data-aos="zoom-out-down">
+                <Link className="post-link" to={`/webUx/student/${student.slug}`} >
                     <img src={student.headshot} alt={student.name + " headshot"} />
                     <h4 className="name">{student.name}</h4>
-                </div>
-            </Link>
+                </Link>
+            </div>
         )
     })
     return mappedStudents;

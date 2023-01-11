@@ -46,10 +46,9 @@ const WebUx = () => {
                 </div>
                 <div id="students-list" className="page-section">
                     <h2 data-aos="zoom-out-down" data-aos-delay="150">Students</h2>
-                    <div>
+                    <div id="all-students-container">
                         <AnimationStudents />
                     </div>
-
                 </div>
             </div>
         </>

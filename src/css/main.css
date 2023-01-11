@@ -142,6 +142,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f2f2f2;
+  text-align: center;
 }
 #footer #footer-faculties {
   margin-bottom: 60px;
@@ -160,7 +161,7 @@
   margin-bottom: 35px;
 }
 #footer .grey-heading-divider {
-  width: 15%;
+  width: 50px;
   height: 1px;
   margin: 10px auto 15px auto;
   background: #373737;
@@ -274,12 +275,6 @@
           animation: bounce 1.5s ease infinite 0.95s;
 }
 
-#test {
-  position: absolute;
-  top: 50px;
-  right: -100px;
-}
-
 #swiper-featured {
   transform: scale(1.2);
   padding: 15px 0;
@@ -318,6 +313,34 @@
   justify-content: center;
 }
 
+#student-spotlight-description {
+  position: absolute;
+  top: 10vw;
+  right: -30vw;
+  text-align: left;
+  width: 30vw;
+}
+#student-spotlight-description h4 {
+  margin-bottom: 30px;
+  font-size: 2.5vw;
+}
+#student-spotlight-description svg {
+  position: relative;
+  top: 3px;
+}
+#student-spotlight-description p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  background: #FCEE1F;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 500px) {
   #swiper-featured {
     transform: scale(1);
@@ -342,6 +365,12 @@
   }
   #swiper-featured #mystery-tagline {
     font-size: 2.5vw;
+  }
+}
+/* 2k tv queries */
+@media screen and (min-width: 2000px) {
+  #student-spotlight-description p {
+    font-size: 1.25vw;
   }
 }
 #modal {
@@ -438,9 +467,9 @@ img {
 
 .button {
   display: inline-block;
+  font-size: 16px;
 }
 .button.regular {
-  font-size: 16px;
   background: #1a1a18;
   font-weight: 500;
   padding: 10px;
@@ -448,8 +477,17 @@ img {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
 }
+.button.yellow {
+  background: #1a1a18;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  color: #1a1a18;
+  background: #FCEE1F;
+  font-weight: 500;
+  border: none;
+}
 .button.go-back {
-  font-size: 16px;
   background: #1a1a18;
   font-weight: 500;
   padding: 10px;
@@ -524,6 +562,10 @@ img {
   padding-bottom: 35px;
 }
 
+#student-spotlight-description {
+  display: none;
+}
+
 .page-section h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -591,7 +633,7 @@ img {
   font-size: 10vw;
   margin-bottom: 35px;
 }
-#student-page #student-name {
+#student-page #student-name h1 {
   margin-bottom: 30px;
   font-size: 13vw;
 }
@@ -602,6 +644,9 @@ img {
 #student-page #student-headshot {
   width: 100%;
   margin-bottom: 25px;
+}
+#student-page #desktop-display-pic {
+  display: none;
 }
 #student-page #breadcrumbs {
   text-align: center;
@@ -705,6 +750,10 @@ img {
   .bubble {
     height: 160vh;
   }
+  #page-header {
+    font-size: 13vw;
+    line-height: 11vw;
+  }
 }
 @media screen and (min-width: 780px) {
   .container-lg {
@@ -733,6 +782,7 @@ img {
     color: black;
     margin-left: 16px;
     font-size: 18px;
+    font-weight: 500;
   }
   #menu li:nth-of-type(1) a {
     background: #FCEE1F;
@@ -764,6 +814,10 @@ img {
   #home #hero img {
     width: 75vw;
   }
+  #page-header {
+    font-size: 10vw;
+    line-height: 8vw;
+  }
 }
 /* Desktop queries */
 @media screen and (min-width: 1000px) {
@@ -774,6 +828,12 @@ h4,
 h5,
 p {
     text-align: left;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .button:hover {
+    cursor: pointer;
   }
   .container-lg {
     padding: 70px 80px 120px 80px;
@@ -794,6 +854,12 @@ p {
   }
   .bubble img {
     max-width: 1500px;
+  }
+  .bubble.faculty-page {
+    height: 120vh;
+  }
+  .bubble.faculty-page img {
+    max-width: 70vw;
   }
   #tagline {
     max-width: 650px;
@@ -821,7 +887,8 @@ p {
   }
   #main #hero {
     text-align: left;
-    height: 74vh;
+    height: auto;
+    margin-bottom: 70px;
   }
   #main #hero #home-logo {
     width: 95%;
@@ -861,11 +928,11 @@ p {
   }
   .page-section h2 {
     text-align: left;
-    letter-spacing: -1px;
-    font-size: 10vw;
+    font-size: 4vw;
+    letter-spacing: 1px;
     line-height: 8vw;
     margin-bottom: 35px;
-    padding-top: 30px;
+    padding-top: 0px;
   }
   .page-section h3 {
     font-size: 2.5vw;
@@ -893,6 +960,83 @@ p {
     margin: 0;
     margin-left: -12.45%;
   }
+  #student-spotlight-description {
+    display: block;
+  }
+  #faculty-icon-container #icon-header {
+    max-width: 25vw;
+    top: -4vw;
+    left: 4vw;
+  }
+  #page-header {
+    text-align: left;
+  }
+  #all-students-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #all-students-container.film-students-list {
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #all-students-container.film-students-list .student-container {
+    margin-bottom: 0px;
+  }
+  #all-students-container a img {
+    width: 100%;
+  }
+  #all-students-container .student-container h4 {
+    font-size: 18px;
+  }
+  #all-students-container .student-container h4.film-student {
+    width: 100%;
+    background: rgba(131, 56, 236, 0.8);
+  }
+  #student-page #student-details {
+    text-align: left;
+  }
+  #student-page #socials-container {
+    text-align: left;
+  }
+  #student-page #socials-container .social-icon {
+    font-size: 32px;
+  }
+  #student-page #breadcrumbs {
+    display: none;
+  }
+  #student-page #student-name h1 {
+    margin-bottom: 0px;
+    font-size: 100px;
+    display: inline-block;
+  }
+  #student-page h2 {
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  #student-page #student-headshot {
+    display: none;
+  }
+  #student-page #desktop-display-pic {
+    display: block;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+  }
+  #student-page .project-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #student-page .project-container h4 {
+    font-size: 18px;
+  }
+  #student-page .project-container .project-image {
+    width: 100%;
+  }
 }
 /* Large Desktop queries */
 @media screen and (min-width: 1400px) {
@@ -915,16 +1059,31 @@ p {
   #menu li a {
     font-size: 20px;
   }
-  #main #hero {
-    height: 82vh;
-  }
   #main #featured {
     margin-bottom: 70px;
+  }
+  #all-students-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #all-students-container.film-students-list {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /* 2k tv queries */
 @media screen and (min-width: 2000px) {
+  .button {
+    font-size: 1.25vw;
+  }
   .container-lg {
     padding: 60px 120px 120px 120px;
+  }
+  .bubble.faculty-page {
+    height: 200vh;
+  }
+  .bubble.faculty-page img {
+    max-width: 60vw;
   }
 }

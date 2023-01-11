@@ -61,14 +61,13 @@ const Student = () => {
             <div id="bubble-1" className="bubble">
                 <img src={bubble} alt="colourful bubble background decal" />
             </div>
-            <div id="bubble-2" className="bubble">
-                <img src={bubble} alt="colourful bubble background decal" />
-            </div>
             <div id="student-details">
                 <Link to="/WebUx">
                     <div id="breadcrumbs" data-aos="zoom-out">Web & UX</div>
                 </Link>
-                <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{studentData.name}</h1>
+                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">                <span id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></span>
+                    <h1>{studentData.name}</h1>
+                </div>
             </div>
             <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
             <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">

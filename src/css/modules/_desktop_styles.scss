@@ -11,6 +11,16 @@
         text-align: left;
     }
 
+    // buttons
+
+    .button {
+        font-size: $button-large;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     // general elements
 
     .container-lg {
@@ -36,6 +46,14 @@
 
         img {
             max-width: 1500px;
+        }
+
+        &.faculty-page {
+            height: 120vh;
+
+            img {
+                max-width: 70vw;
+            }
         }
     }
 
@@ -72,7 +90,8 @@
     #main {
         #hero {
             text-align: left;
-            height: 74vh;
+            height: auto;
+            margin-bottom: $section-spacing;
 
             #home-logo {
                 width: 95%;
@@ -86,8 +105,6 @@
     .arrow-down {
         display: none;
     }
-
-
 
     #faculties {
 
@@ -135,11 +152,14 @@
     .page-section {
         h2 {
             text-align: left;
-            letter-spacing: -1px;
-            font-size: 10vw;
+            // letter-spacing: -1px;
+            // font-size: 10vw;
+            font-size: 4vw;
+            letter-spacing: 1px;
+            ;
             line-height: 8vw;
             margin-bottom: $larger-spacing;
-            padding-top: 30px;
+            padding-top: 0px;
         }
 
         h3 {
@@ -175,6 +195,129 @@
         width: 50%;
         margin: 0;
         margin-left: -12.45%;
+    }
+
+    #student-spotlight-description {
+        display: block;
+    }
+
+    // faculty page
+
+    #faculty-icon-container #icon-header {
+        max-width: 25vw;
+        top: -4vw;
+        left: 4vw;
+    }
+
+    #page-header {
+        text-align: left;
+    }
+
+    #all-students-container {
+        display: grid;
+        gap: $large-spacing;
+        grid-template-columns: repeat(3, 1fr);
+
+        &.film-students-list {
+            gap: $med-spacing;
+            grid-template-columns: repeat(2, 1fr);
+
+            .student-container {
+                margin-bottom: 0px;
+            }
+        }
+
+        a {
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                img {
+                    // opacity: 0.5;
+                }
+
+            }
+        }
+
+        .student-container {
+            h4 {
+                font-size: 18px;
+
+                &.film-student {
+                    width: 100%;
+                    background: rgb(131 56 236 / 80%);
+                }
+            }
+        }
+    }
+
+    // individual student page 
+    #student-page {
+
+        #student-details {
+            text-align: left;
+            ;
+        }
+
+        #socials-container {
+            text-align: left;
+
+            .social-icon {
+                font-size: 32px;
+            }
+
+        }
+
+        #breadcrumbs {
+            // position: relative;
+            // top: 10px;
+            // z-index: 10;
+            // right: -18px;
+            display: none;
+        }
+
+        #student-name {
+            h1 {
+                margin-bottom: 0px;
+                font-size: 100px;
+                display: inline-block;
+            }
+
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 40px;
+            margin-bottom: $larger-spacing;
+        }
+
+        #student-headshot {
+            display: none;
+        }
+
+        #desktop-display-pic {
+            display: block;
+            background-size: cover;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: $med-spacing;
+        }
+
+        .project-container {
+            display: grid;
+            gap: $large-spacing;
+            grid-template-columns: repeat(3, 1fr);
+
+            h4 {
+                font-size: 18px;
+            }
+
+            .project-image {
+                width: 100%;
+            }
+        }
     }
 
 }
@@ -216,21 +359,47 @@
 
     // home
     #main {
-        #hero {
-            height: 82vh;
-        }
-
         #featured {
             margin-bottom: $section-spacing;
+        }
+    }
+
+    // faculty
+    #all-students-container {
+        display: grid;
+        gap: $large-spacing;
+        grid-template-columns: repeat(5, 1fr);
+
+        &.film-students-list {
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
 
 /* 2k tv queries */
 @media screen and (min-width: 2000px) {
+
+    // button
+    .button {
+        font-size: 1.25vw;
+    }
+
     // general
 
     .container-lg {
         padding: 60px 120px 120px 120px;
     }
+
+    .bubble {
+
+        &.faculty-page {
+            height: 200vh;
+
+            img {
+                max-width: 60vw;
+            }
+        }
+    }
+
 }
