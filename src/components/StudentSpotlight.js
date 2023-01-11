@@ -1,22 +1,23 @@
 // dependencies
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper';
-// get data for featured student
+// get data for spotlight students
 import { animationData } from '../data/animationStudentData';
 import { webData } from '../data/webStudentData';
-import { filmData } from '../data/filmStudentData';
 // swiper
 import 'swiper/swiper.min.css';
+// utilities
+import { randomStudentLink } from '../util/randomStudentLink';
 // images
 import mysteryStudentImage from "../img/mystery-student.jpg";
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const RandomStudentSlides = () => {
+const RandomStudentSlides = ({ studentsArray, index }) => {
     // get all web students
     const webStudents = webData.map((student) => {
         student.faculty = "webUx";
@@ -39,7 +40,7 @@ const RandomStudentSlides = () => {
             // run through random number array
             for (let i = 0; i < randomStudentIndexes.length; i++) {
                 // check if current iteration of random number array is equal to new generated number
-                if (randomUniqueNumber == randomStudentIndexes[i]) {
+                if (randomUniqueNumber === randomStudentIndexes[i]) {
                     // if equal, regenerate random number
                     // note: check for double ups
                     // console.log("detected double up of " + randomUniqueNumber + " and " + randomStudentIndexes[i]);
@@ -57,7 +58,8 @@ const RandomStudentSlides = () => {
     for (let i = 0; i < randomStudentIndexes.length; i++) {
         randomStudents.push(allStudents[randomStudentIndexes[i]]);
     }
-
+    // update home component with our students
+    studentsArray(randomStudents);
     // // map to show random projects in a swiper slide
     const mappedRandomStudents = randomStudents.map((student, index) => {
         return (
@@ -65,41 +67,15 @@ const RandomStudentSlides = () => {
                 <Link to={`/${student.faculty}/student/${student.slug}`}>
                     <img src={student.headshot} className="swiper-image" alt={student.name + "headshot photo"} />
                 </Link>
+                {/* <div className="desktop-spotlight-info">
+                    <h3>{student.name}</h3>
+                    <h4>{student.faculty}</h4>
+                </div> */}
             </SwiperSlide>
         )
     })
 
     const SwiperSlides = () => {
-        const randomStudentLink = () => {
-
-            // get all web students
-            const webStudents = webData.map((student) => {
-                student.faculty = "webUx";
-                return student;
-            })
-            // get all animation students
-            const animationStudents = animationData.map((student) => {
-                student.faculty = "animation";
-                return student;
-            })
-            // get all film tv students
-            const filmStudents = filmData.map((student) => {
-                student.faculty = "film";
-                return student;
-            })
-
-            const allStudents = [...webStudents, ...animationStudents, ...filmStudents];
-
-            console.log(allStudents);
-
-            // generate random number to choose a random student
-            const randomUniqueNumber = Math.floor(Math.random() * allStudents.length - 1) + 1;
-            // student 
-            const randomlyChosenStudent = allStudents[randomUniqueNumber];
-            return `${randomlyChosenStudent.faculty}/student/${randomlyChosenStudent.slug}`
-        }
-
-
         return (
             <Swiper
                 id="swiper-featured"
@@ -110,13 +86,15 @@ const RandomStudentSlides = () => {
                 modules={[EffectCards]}
                 spaceBetween={0}
                 initialSlide={0}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 150,
-                    modifier: 1.1,
-                    slideShadows: true,
+                cardsEffect={{
+                    perSlideOffset: 10,
+                    perSlideRotate: 3
                 }}
+                onSlideChange={(swiper) => {
+                    // get new index of swiper on change, send back to home component
+                    index(swiper.activeIndex);
+                }}
+
             >
                 {mappedRandomStudents}
                 <SwiperSlide key={2}>
@@ -137,7 +115,6 @@ const RandomStudentSlides = () => {
                                 <div className="e2">e</div>
                                 <div className="mark">!</div>
                             </div>
-                            {/* <p >Surprise me!</p> */}
                         </Link>
                     </div>
                 </SwiperSlide>
@@ -148,17 +125,19 @@ const RandomStudentSlides = () => {
     return <SwiperSlides />;
 }
 
-const StudentSpotlight = () => {
+const StudentSpotlight = ({ students, currentIndex }) => {
+    // set the current index to 0 by default
+    currentIndex(0);
+    // init AOS
     useEffect(() => {
         AOS.init({
             duration: 400,
             easing: 'ease-in-out-back'
         });
     }, [])
-    // randomiseProjects();
     return (
         <div id="student-spotlight" data-aos="zoom-out">
-            <RandomStudentSlides />
+            <RandomStudentSlides studentsArray={students} index={currentIndex} />
         </div>
     )
 }

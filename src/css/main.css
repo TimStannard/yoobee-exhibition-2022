@@ -496,7 +496,7 @@ img {
   margin-bottom: 60px;
 }
 
-#hero-squiggle {
+.squiggle {
   display: none;
 }
 
@@ -511,7 +511,7 @@ img {
 }
 
 #featured {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   text-align: center;
 }
 #featured #student-spotlight {
@@ -533,8 +533,6 @@ img {
   text-decoration: none;
   margin-bottom: 30px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 #faculties {
@@ -696,11 +694,7 @@ img {
   .page-section h3 {
     font-size: 35px;
     line-height: 8.5vw;
-    text-decoration: none;
     margin-bottom: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
   }
   .bubble {
     height: 160vh;
@@ -801,25 +795,32 @@ p {
     text-align: left;
     margin-bottom: 35px;
   }
-  #hero-squiggle {
+  .squiggle {
     display: block;
+    position: relative;
   }
-  #hero-squiggle img {
+  #hero-squiggle {
     transform: rotate(13deg);
     width: 28vw;
     max-width: 315px;
-    position: relative;
     left: 150px;
     top: 0.95vh;
   }
+  #featured-squiggle {
+    transform: rotate(13deg);
+    width: 28vw;
+    max-width: 315px;
+    left: 150px;
+    top: 3.25vh;
+  }
   #main #hero {
     text-align: left;
-    height: 80vh;
+    height: 74vh;
   }
   #main #hero #home-logo {
     width: 95%;
     margin-bottom: 35px;
-    max-width: 720px;
+    max-width: 40vw;
   }
   .arrow-down {
     display: none;
@@ -832,7 +833,7 @@ p {
   }
   #faculties .faculty-row .faculty-item {
     text-align: center;
-    padding: 25px;
+    padding: 50px 0px 0px 0px;
   }
   #faculties .faculty-row .faculty-item h3 {
     text-align: center;
@@ -857,8 +858,8 @@ p {
     letter-spacing: -1px;
     font-size: 10vw;
     line-height: 8vw;
-    margin-bottom: 70px;
-    padding-top: 60px;
+    margin-bottom: 35px;
+    padding-top: 30px;
   }
   .page-section h3 {
     font-size: 2.5vw;
@@ -866,6 +867,20 @@ p {
   }
   #featured {
     text-align: left;
+  }
+  #featured #student-spotlight {
+    padding: 35px 17px;
+  }
+  #featured #desktop-spotlight-info {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 40%;
+    color: white;
+    font-size: 30px;
+  }
+  #featured #swiper-relative-positioned-container {
+    position: relative;
   }
   #student-spotlight {
     width: 50%;
@@ -876,7 +891,7 @@ p {
 /* Large Desktop queries */
 @media screen and (min-width: 1400px) {
   .container-lg {
-    padding: 70px 140px 140px 140px;
+    padding: 60px 140px 140px 140px;
   }
   .bubble {
     height: 220vh;
@@ -885,7 +900,7 @@ p {
     max-width: 2000px;
   }
   .page-section h2 {
-    margin-bottom: 100px;
+    margin-bottom: 35px;
   }
   .page-section h3 {
     font-size: 2vw;
@@ -893,6 +908,12 @@ p {
   }
   #menu li a {
     font-size: 20px;
+  }
+  #main #hero {
+    height: 82vh;
+  }
+  #main #featured {
+    margin-bottom: 70px;
   }
 }
 /* 2k tv queries */
