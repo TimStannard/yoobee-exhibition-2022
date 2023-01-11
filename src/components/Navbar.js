@@ -29,13 +29,13 @@ const Navbar = () => {
                 {/* Desktop Menu, which only appears on large screens */}
                 <ul id='menu'>
                     <li>
-                        <Link to="/">Web & UX</Link>
+                        <Link to="/webUx">Web & UX</Link>
                     </li>
                     <li>
-                        <Link to="/artists">Animation</Link>
+                        <Link to="/animation">Animation</Link>
                     </li>
                     <li>
-                        <Link to="/shop">Film & Television</Link>
+                        <Link to="/film">Film & Television</Link>
                     </li>
                 </ul>
 

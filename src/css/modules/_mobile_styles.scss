@@ -84,7 +84,7 @@ img {
 .bubble {
     position: absolute;
     width: 100%;
-    height: calc(100vh + 150vw);
+    height: calc(100vh + 100vw);
     overflow: hidden;
     z-index: -99;
 
@@ -140,7 +140,7 @@ img {
 
 // ---------featured section
 #featured {
-    margin-bottom: $max-spacing;
+    margin-bottom: $section-spacing;
     text-align: center;
 
     #student-spotlight {
@@ -172,7 +172,7 @@ img {
 
     .faculty-item {
 
-        padding: $large-spacing 0 $regular-spacing 0;
+        padding: $regular-spacing 0;
 
         img {
             max-width: 75px;

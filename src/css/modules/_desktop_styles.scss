@@ -14,7 +14,7 @@
     // general elements
 
     .container-lg {
-        padding: 40px 60px;
+        padding: 70px 80px 120px 80px;
     }
 
     #topnav {
@@ -26,6 +26,20 @@
         right: -31vw;
     }
 
+    #bubble-2 img {
+        top: 19vw;
+        left: -62vw;
+    }
+
+    .bubble {
+        height: 150vw;
+
+        img {
+            max-width: 1500px;
+        }
+    }
+
+    // homepage
 
     #tagline {
         max-width: 650px;
@@ -48,14 +62,6 @@
 
     }
 
-    // .item-container {
-    //     display: grid;
-    //     grid-template-columns: repeat(5, 1fr);
-    //     margin-bottom: 20px;
-    // }
-    // home
-
-
     #main {
         #hero {
             text-align: left;
@@ -73,6 +79,49 @@
         display: none;
     }
 
+
+
+    #faculties {
+
+        .faculty-row {
+            display: flex;
+
+            a {
+                width: 33%;
+            }
+
+            .faculty-item {
+                text-align: center;
+                padding: 25px;
+
+                h3 {
+                    text-align: center;
+                }
+
+                img {
+                    max-width: 180px;
+                }
+
+                .icon-container {
+                    height: 200px;
+                    margin-bottom: $med-spacing;
+
+                    #animation-icon {
+                        position: relative;
+                        top: 13px;
+                    }
+
+                    #film-icon {
+                        position: relative;
+                        top: -12px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
     // headers
 
     .page-section {
@@ -81,10 +130,71 @@
             letter-spacing: -1px;
             font-size: 10vw;
             line-height: 8vw;
-            margin-bottom: 80px;
+            margin-bottom: $section-spacing;
             padding-top: 60px;
+        }
+
+        h3 {
+            font-size: 2.5vw;
+            line-height: 2.5vw;
         }
 
     }
 
+    // spotlight
+    #featured {
+        text-align: left;
+    }
+
+    #student-spotlight {
+        width: 50%;
+        margin: 0;
+        margin-left: -12.45%;
+    }
+
+}
+
+/* Large Desktop queries */
+@media screen and (min-width:1400px) {
+
+    // general
+
+    .container-lg {
+        padding: 70px 140px 140px 140px;
+    }
+
+    .bubble {
+        height: 220vh;
+
+        img {
+            max-width: 2000px;
+        }
+    }
+
+    .page-section {
+        h2 {
+            margin-bottom: $largest-section-spacing;
+        }
+
+        h3 {
+            font-size: 2vw;
+            line-height: 2vw;
+        }
+
+    }
+
+    // nav
+
+    #menu li a {
+        font-size: 20px;
+    }
+}
+
+/* 2k tv queries */
+@media screen and (min-width: 2000px) {
+    // general
+
+    .container-lg {
+        padding: 60px 120px 120px 120px;
+    }
 }
