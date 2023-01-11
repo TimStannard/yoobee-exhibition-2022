@@ -76,6 +76,12 @@
 
 // styles
 
+#test {
+    position: absolute;
+    top: 50px;
+    right: -100px;
+}
+
 #swiper-featured {
     transform: scale(1.20);
     padding: $regular-spacing 0;

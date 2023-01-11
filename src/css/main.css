@@ -274,6 +274,12 @@
           animation: bounce 1.5s ease infinite 0.95s;
 }
 
+#test {
+  position: absolute;
+  top: 50px;
+  right: -100px;
+}
+
 #swiper-featured {
   transform: scale(1.2);
   padding: 15px 0;

@@ -50,15 +50,18 @@ const Home = () => {
     const getSlideStudents = (students) => {
         console.log("students");
         console.log(students);
-        // return students;
+        return (
+            <h1>{students}</h1>
+        );
     }
+
+    const [test, setTest] = useState(0);
 
 
     const CurrentSpotlightDetails = () => {
         return (
             <>
-                {/* <h3>{getCurrentIndex()}</h3> */}
-                <h4>Faculty</h4>
+                <h4>{test}</h4>
             </>
         )
     }
@@ -86,7 +89,7 @@ const Home = () => {
                     <div id="swiper-relative-positioned-container">
                         <StudentSpotlight students={getSlideStudents} currentIndex={getCurrentIndex} />
                         <div id="desktop-spotlight-info" data-aos="zoom-out-down" data-aos-delay="150">
-                            <CurrentSpotlightDetails />
+                            {/* <CurrentSpotlightDetails /> */}
                         </div>
                     </div>
                     <div id="featured-squiggle" className="squiggle" data-aos="fade-in" data-aos-anchor-placement="center" data-aos-duration="800">
