@@ -1,6 +1,15 @@
 /* Desktop queries */
 @media screen and (min-width: 1000px) {
 
+    // util
+    .hide-on-desktop {
+        display: none;
+    }
+
+    .hide-on-mobile {
+        display: block;
+    }
+
     // typography
     h1,
     h2,
@@ -42,7 +51,7 @@
     }
 
     .bubble {
-        height: 150vw;
+        height: 135vw;
 
         img {
             max-width: 1500px;
@@ -83,7 +92,7 @@
         transform: rotate(13deg);
         width: 28vw;
         max-width: 315px;
-        left: 150px;
+        left: calc(150px + 10vw);
         top: 3.25vh;
     }
 
@@ -112,12 +121,16 @@
             display: flex;
 
             a {
-                width: 33%;
+                width: 31%;
+                border-radius: 10px;
+                margin: 0 2% 35px 0;
+                padding: 20px 20px;
+                // background: rgb(255 255 255 / 3%);
             }
 
             .faculty-item {
                 text-align: center;
-                padding: 50px 0px 0px 0px;
+                padding: 30px 0px 0px 0px;
 
                 h3 {
                     text-align: center;
@@ -152,14 +165,19 @@
     .page-section {
         h2 {
             text-align: left;
-            // letter-spacing: -1px;
-            // font-size: 10vw;
             font-size: 4vw;
             letter-spacing: 1px;
-            ;
             line-height: 8vw;
             margin-bottom: $larger-spacing;
             padding-top: 0px;
+
+            &.no-bottom-margin {
+                margin-bottom: 0;
+            }
+
+            &#choose-faculty-h2 {
+                text-align: center;
+            }
         }
 
         h3 {
@@ -224,6 +242,7 @@
 
             .student-container {
                 margin-bottom: 0px;
+                text-align: left;
             }
         }
 
@@ -245,7 +264,7 @@
                 font-size: 18px;
 
                 &.film-student {
-                    width: 100%;
+                    width: auto;
                     background: rgb(131 56 236 / 80%);
                 }
             }
@@ -263,8 +282,8 @@
         #socials-container {
             text-align: left;
             position: relative;
-            top: -28px;
-            left: 160px;
+            top: -61px;
+            left: 230px;
             margin-bottom: $large-section-spacing;
 
             .social-icon {
@@ -273,12 +292,31 @@
 
         }
 
+        .project-item:hover {
+            cursor: pointer;
+        }
+
+
+        #bubble-1 {
+            height: 200vh;
+
+            img {
+                top: -28vw;
+                right: -40vw;
+            }
+
+        }
+
         #breadcrumbs {
-            // position: relative;
-            // top: 10px;
-            // z-index: 10;
-            // right: -18px;
-            display: none;
+            position: relative;
+            top: 45px;
+            z-index: 10;
+            right: -230px;
+            display: inline-block;
+            background: transparent;
+            color: #FCEE1F;
+            box-shadow: none;
+            padding: 0;
         }
 
         #student-name {
@@ -287,7 +325,7 @@
                 font-size: 70px;
                 display: inline-block;
                 position: relative;
-                top: -36px;
+                top: -78px;
                 left: 28px;
             }
 
@@ -306,11 +344,11 @@
         #desktop-display-pic {
             display: inline-block;
             background-size: cover;
-            width: 130px;
-            height: 130px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             position: relative;
-            top: 30px;
+            top: 5px;
         }
 
         .project-container {
@@ -326,6 +364,40 @@
                 width: 100%;
             }
         }
+
+        #back-button-container {
+            text-align: left;
+        }
+
+        // aniimation student
+
+        video {
+            height: 75vh;
+        }
+
+        // film students styles
+        &.film-tv {
+            #breadcrumbs {
+                top: 0;
+                left: 0;
+            }
+
+            #student-name {
+                h1 {
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            #socials-container {
+                top: 0;
+                left: 0;
+            }
+
+            p {
+                width: 40%;
+            }
+        }
     }
 
 }
@@ -336,11 +408,11 @@
     // general
 
     .container-lg {
-        padding: 60px 140px 140px 140px;
+        padding: 60px 140px 160px 140px;
     }
 
     .bubble {
-        height: 220vh;
+        height: 210vh;
 
         img {
             max-width: 2000px;
@@ -348,9 +420,9 @@
     }
 
     .page-section {
-        h2 {
-            margin-bottom: $larger-spacing;
-        }
+        // h2 {
+        //     margin-bottom: $larger-spacing;
+        // }
 
         h3 {
             font-size: 2vw;
@@ -380,7 +452,7 @@
 
         &.film-students-list {
             gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }
@@ -411,9 +483,3 @@
     }
 
 }
-
-// change this position on web ux student item page
-// #bubble-1 img {
-//     top: -43vw;
-//     left: -31vw;
-// }

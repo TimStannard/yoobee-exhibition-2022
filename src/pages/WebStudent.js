@@ -79,9 +79,11 @@ const Student = () => {
             </div> */}
             <h2 data-aos="zoom-out" data-aos-delay="200">Projects</h2>
             {!loading && <Projects student={studentData} openModal={setModal} setProject={updateProject} />}
-            <Link to="/WebUx">
-                <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Web & UX</button>
-            </Link>
+            <div id="back-button-container">
+                <Link to="/WebUx">
+                    <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Web & UX</button>
+                </Link>
+            </div>
             {modalOpen && <ProjectModal currentProject={project} closeMethod={setModal} currentSlug={slug} />}
         </div>
     )

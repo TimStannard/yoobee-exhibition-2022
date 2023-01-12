@@ -43,30 +43,30 @@ const Student = () => {
     }, []);
 
     return (
-        <div id="student-page" className="page-container container-lg film-tv">
+        <div id="student-page" className="page-container container-lg">
             <div id="bubble-1" className="bubble">
-                <img src={bubble} alt="colourful bubble background decal" />
-            </div>
-            <div id="bubble-2" className="bubble">
                 <img src={bubble} alt="colourful bubble background decal" />
             </div>
             <div id="student-details">
                 <Link to="/animation">
                     <div id="breadcrumbs" data-aos="zoom-out">Animation</div>
                 </Link>
-                <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{studentData.name}</h1>
+                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
+                    <span id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></span>
+                    <h1>{studentData.name}</h1>
+                </div>
             </div>
             <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
-            <h2 data-aos="zoom-out" data-aos-delay="200">{studentData.project}</h2>
-            {/* image */}
-            <h4 data-aos="zoom-out" data-aos-delay="250">Showreel</h4>
+            <h2 data-aos="zoom-out" data-aos-delay="250">Showreel</h2>
             <video width="100%" height="240" controls data-aos="zoom-out" data-aos-delay="300">
                 <source src={`http://ignite.yoobeestudent.net/${slug}.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <Link to="/animation">
-                <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Animation</button>
-            </Link>
+            <div id="back-button-container">
+                <Link to="/animation">
+                    <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Animation</button>
+                </Link>
+            </div>
         </div>
     )
 }

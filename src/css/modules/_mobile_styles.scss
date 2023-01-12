@@ -1,6 +1,4 @@
 // ---------general
-
-
 h1,
 h2,
 h3,
@@ -35,6 +33,13 @@ body {
 
 img {
     border-radius: 2px;
+}
+
+// util
+
+.hide-on-mobile {
+    display: none;
+    ;
 }
 
 // ---------navbar
@@ -224,6 +229,7 @@ img {
     }
 }
 
+
 // student page
 
 #student-page {
@@ -292,6 +298,10 @@ img {
             border-radius: 5px;
             padding: 6px;
         }
+    }
+
+    video {
+        background: black;
     }
 
     &.film-tv {

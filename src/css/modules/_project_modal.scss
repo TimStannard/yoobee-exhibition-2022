@@ -1,5 +1,6 @@
 #modal {
     height: 100%;
+    width: 100%;
     overflow-y: scroll;
     position: fixed;
     top: 0;
@@ -7,6 +8,8 @@
     background: rgb(0 0 0 / 70%);
     padding: 25vw 30px;
     backdrop-filter: blur(25px);
+    z-index: 100;
+    box-sizing: border-box;
 
     h1 {
         font-size: $header-largest-vw;
@@ -31,6 +34,11 @@
         right: 12px;
         font-size: 53px;
         color: white;
+
+        &:hover {
+            color: yellow;
+            cursor: pointer;
+        }
     }
 
     .project-mockup-image {
@@ -51,4 +59,74 @@
     }
 
 
+}
+
+/* Desktop queries */
+@media screen and (min-width: 1000px) {
+    #modal {
+        padding: 18vh 15% 160px 15%;
+        backdrop-filter: blur(25px);
+        text-align: left;
+        box-shadow: inset 0 0 300px 100px rgba(0, 0, 0, 0.438);
+
+        h1 {
+            font-size: 6vw;
+            line-height: 6vw;
+            width: 65%;
+            margin-bottom: 80px;
+            color: $yellow;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+            padding: 0px 18% 0 0;
+            background: transparent;
+            line-height: 24px;
+            text-align: left;
+        }
+
+        #end-divider {
+            margin: 0;
+            background: transparent;
+        }
+
+        h3 {
+            margin-bottom: $large-spacing;
+            color: white;
+            font-size: 25px;
+        }
+
+        #project-flex-container {
+            display: flex;
+            border-bottom: 1px solid #5e5e5ed6;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+
+            #description-container {
+                width: 30%;
+                margin-right: 3%;
+            }
+
+            #project-gallery {
+                width: 66%;
+            }
+        }
+
+        #project-subheader {
+            text-align: center;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: inline-block;
+            background: $yellow;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: relative;
+            top: -20px;
+            box-shadow: 3px 3px 0px 1px $purple;
+        }
+
+    }
 }

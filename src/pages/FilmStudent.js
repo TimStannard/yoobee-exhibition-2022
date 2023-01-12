@@ -49,14 +49,13 @@ const Student = () => {
             <div id="bubble-1" className="bubble">
                 <img src={bubble} alt="colourful bubble background decal" />
             </div>
-            <div id="bubble-2" className="bubble">
-                <img src={bubble} alt="colourful bubble background decal" />
-            </div>
             <div id="student-details">
                 <Link to="/WebUx">
                     <div id="breadcrumbs" data-aos="zoom-out">Film and TV</div>
                 </Link>
-                <h1 id="student-name" data-aos="zoom-out" data-aos-delay="50">{studentData.name}</h1>
+                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
+                    <h1>{studentData.name}</h1>
+                </div>
             </div>
             <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
                 {!loading && <SocialMediaLinks student={studentData} />}
@@ -64,9 +63,11 @@ const Student = () => {
             <h2 data-aos="zoom-out" data-aos-delay="200">Project: {studentData.project}</h2>
             <h4 data-aos="zoom-out" data-aos-delay="250">Role</h4>
             <p className="p-description" data-aos="zoom-out" data-aos-delay="300">{studentData.role}</p>
-            <Link to="/film">
-                <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Film and TV</button>
-            </Link>
+            <div id="back-button-container">
+                <Link to="/film">
+                    <button id="student-page-button" className="button go-back" data-aos="zoom-out-up"><ArrowLeft /> Back to Film and TV</button>
+                </Link>
+            </div>
         </div>
     )
 }

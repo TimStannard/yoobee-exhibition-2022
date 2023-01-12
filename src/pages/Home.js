@@ -85,12 +85,9 @@ const Home = () => {
                     </button>
                 </div>
                 <div id="featured" className="page-section">
-                    <h2 data-aos="zoom-out-down" data-aos-delay="150" ref={ref}>Student Spotlight</h2>
+                    <h2 data-aos="zoom-out-down" data-aos-delay="150" ref={ref} className="no-bottom-margin">Student Spotlight</h2>
                     <div id="swiper-relative-positioned-container">
                         <StudentSpotlight students={getSlideStudents} currentIndex={getCurrentIndex} />
-                        <div id="desktop-spotlight-info" data-aos="zoom-out-down" data-aos-delay="150">
-                            {/* <CurrentSpotlightDetails /> */}
-                        </div>
                     </div>
                     <div id="featured-squiggle" className="squiggle" data-aos="fade-in" data-aos-anchor-placement="center" data-aos-duration="800">
                         <img src={featSquiggle} alt="white squiggle pointing to next section" />
@@ -100,7 +97,7 @@ const Home = () => {
                     <img src={bubble} alt="colourful bubble background decal" />
                 </div>
                 <div id="faculties" className="page-section">
-                    <h2 data-aos="zoom-out-down">Faculties</h2>
+                    <h2 id="choose-faculty-h2" data-aos="zoom-out-down" >Choose a Faculty:</h2>
                     <div className="faculty-row">
                         <Link to="/webUx">
                             <div className="faculty-item" data-aos="zoom-out">
