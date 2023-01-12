@@ -298,11 +298,13 @@
 
 
         #bubble-1 {
-            height: 200vh;
+            height: 120vh;
 
             img {
                 top: -28vw;
                 right: -40vw;
+                // max-width: 200vh;
+                max-width: 100vw;
             }
 
         }
@@ -327,6 +329,7 @@
                 position: relative;
                 top: -78px;
                 left: 28px;
+                width: 75%;
             }
 
         }
@@ -335,6 +338,7 @@
             text-align: left;
             font-size: 40px;
             margin-bottom: $larger-spacing;
+            color: $yellow;
         }
 
         #student-headshot {
@@ -412,7 +416,7 @@
     }
 
     .bubble {
-        height: 210vh;
+        height: 205vh;
 
         img {
             max-width: 2000px;

@@ -6,6 +6,8 @@ import { ArrowDownCircle } from 'react-bootstrap-icons';
 import AnimationIcon from '../img/animation-icon.svg';
 // components
 import AnimationStudents from "../components/AnimationStudents";
+// img
+import bubble from "../img/bubble.svg";
 // AOS animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,6 +38,9 @@ const WebUx = () => {
                 <div id="hero">
                     <div id="faculty-icon-container" data-aos="fade-in" data-aos-delay="50">
                         <img src={AnimationIcon} data-aos="zoom-out" data-aos-delay="50" id="icon-header" alt="web ux icon" />
+                    </div>
+                    <div id="bubble-1" className="bubble faculty-page">
+                        <img src={bubble} alt="colourful bubble background decal" />
                     </div>
                     <h1 id="page-header" data-aos="zoom-out" >
                         Animation

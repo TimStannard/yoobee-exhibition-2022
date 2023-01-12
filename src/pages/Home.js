@@ -55,17 +55,6 @@ const Home = () => {
         );
     }
 
-    const [test, setTest] = useState(0);
-
-
-    const CurrentSpotlightDetails = () => {
-        return (
-            <>
-                <h4>{test}</h4>
-            </>
-        )
-    }
-
     return (
         <>
             <div id="main" className="container-lg">

@@ -333,6 +333,7 @@ img {
 
     img {
         width: 80%;
+        border: 2px solid #3f3f3f;
     }
 }
 
@@ -343,6 +344,11 @@ img {
 
     .project-image {
         width: 80%;
+        border: 2px solid #3f3f3f;
+        background: #3f3f3f;
+        max-height: 320px;
+        object-fit: cover;
+        object-position: top;
     }
 
     h4 {
