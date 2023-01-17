@@ -49,8 +49,24 @@ const Student = () => {
             <div id="bubble-1" className="bubble">
                 <img src={bubble} alt="colourful bubble background decal" />
             </div>
-            <div id="student-details">
-                <Link to="/WebUx">
+            {/* this only shows on desktop */}
+            <div id="desktop-student-details">
+                <div id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></div>
+                <div id="text-column">
+                    <Link to="/film">
+                        <div id="breadcrumbs" data-aos="zoom-out">Film and TV</div>
+                    </Link>
+                    <div className="student-name" data-aos="zoom-out" data-aos-delay="50">
+                        <h1>{studentData.name}</h1>
+                    </div>
+                    <div className="socials-container" data-aos="zoom-out" data-aos-delay="150">
+                        {!loading && <SocialMediaLinks student={studentData} />}
+                    </div>
+
+                </div>
+            </div>
+            <div id="student-details" className="hide-on-desktop">
+                <Link to="/film">
                     <div id="breadcrumbs" data-aos="zoom-out">Film and TV</div>
                 </Link>
                 <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
@@ -60,6 +76,7 @@ const Student = () => {
             <div id="socials-container" data-aos="zoom-out" data-aos-delay="150">
                 {!loading && <SocialMediaLinks student={studentData} />}
             </div>
+            <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
             <h2 data-aos="zoom-out" data-aos-delay="200">Project: <br />{studentData.project}</h2>
             <h4 data-aos="zoom-out" data-aos-delay="250">Role</h4>
             <p className="p-description" data-aos="zoom-out" data-aos-delay="300">{studentData.role}</p>

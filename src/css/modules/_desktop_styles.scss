@@ -33,7 +33,7 @@
     // general elements
 
     .container-lg {
-        padding: 70px 80px 120px 80px;
+        padding: 40px 80px 120px 80px;
     }
 
     #topnav {
@@ -379,23 +379,23 @@
             height: 75vh;
         }
 
-        // film students styles
+        // film students styles 
         &.film-tv {
-            #breadcrumbs {
-                top: 0;
-                left: 0;
-            }
 
-            #student-name {
-                h1 {
-                    top: 0;
-                    left: 0;
-                }
-            }
+            //     #breadcrumbs {
+            //         top: 0;
+            //         left: 0;
+            //     }
+
+            //     #student-name {
+            //         h1 {
+            //             top: 0;
+            //             left: 0;
+            //         }
+            //     }
 
             #socials-container {
-                top: 0;
-                left: 0;
+                top: -90px;
             }
 
             p {
@@ -412,7 +412,7 @@
     // general
 
     .container-lg {
-        padding: 60px 140px 160px 140px;
+        padding: 40px 140px 160px 140px;
     }
 
     .bubble {

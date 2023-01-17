@@ -238,6 +238,7 @@ img {
     h2 {
         @include h2-styles;
         margin-bottom: $larger-spacing;
+        color: $yellow;
     }
 
     #student-name {

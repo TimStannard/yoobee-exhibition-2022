@@ -279,9 +279,9 @@ export const filmData = [
         role: "As the Producer for Hobson's Choice, it was a challenging endeavour to build this project from the ground up. There were countless hours of developing this story with our Director, running a fundraising campaign, managing finances, arranging sponsored catering, coordinating crew during pre-production and securing actors for our shoot. I was forced to learn quickly, adapt to the circumstances and resolve issues efficiently in order to keep the shoot running smoothly. I'm grateful for the opportunity to learn production management and exercise leadership in such a hands on way and I feel equipped to pursue more projects in the future.",
     },
     {
-        slug: "james",
+        slug: "james-2",
         name: "James Ritchie",
-        headshot: "/student-images/film/headshots/james.jpg",
+        headshot: "/student-images/film/headshots/james-2.jpg",
         social_media: [
             {
                 type: "email",
