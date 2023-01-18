@@ -33,7 +33,7 @@
     // general elements
 
     .container-lg {
-        padding: 70px 80px 120px 80px;
+        padding: 40px 80px 120px 80px;
     }
 
     #topnav {
@@ -274,17 +274,17 @@
     // individual student page 
     #student-page {
 
+        text-align: left;
+
         #student-details {
             text-align: left;
-            ;
         }
 
-        #socials-container {
+
+
+        .socials-container {
             text-align: left;
-            position: relative;
-            top: -61px;
-            left: 230px;
-            margin-bottom: $large-section-spacing;
+            margin-bottom: 0;
 
             .social-icon {
                 font-size: 32px;
@@ -309,16 +309,10 @@
 
         }
 
-        #breadcrumbs {
-            position: relative;
-            top: 45px;
+        .breadcrumbs {
             z-index: 10;
-            right: -230px;
-            display: inline-block;
-            background: transparent;
-            color: #FCEE1F;
-            box-shadow: none;
-            padding: 0;
+            margin-bottom: 10px;
+            text-align: left;
         }
 
         #student-name {
@@ -329,7 +323,7 @@
                 position: relative;
                 top: -78px;
                 left: 28px;
-                width: 75%;
+                width: 85%;
             }
 
         }
@@ -345,15 +339,20 @@
             display: none;
         }
 
-        #desktop-display-pic {
-            display: inline-block;
-            background-size: cover;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            position: relative;
-            top: 5px;
+        #desktop-student-details {
+            display: flex;
+            padding-bottom: $larger-spacing;
+
+            #desktop-display-pic {
+                display: block;
+                background-size: cover;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-right: 40px;
+            }
         }
+
 
         .project-container {
             display: grid;
@@ -369,7 +368,7 @@
             }
         }
 
-        #back-button-container {
+        .back-button-container {
             text-align: left;
         }
 
@@ -377,34 +376,50 @@
 
         video {
             height: 75vh;
+            margin-bottom: $large-spacing;
         }
 
-        // film students styles
-        &.film-tv {
-            #breadcrumbs {
-                top: 0;
-                left: 0;
+        // film students styles 
+        #desktop-student-details {
+            margin-bottom: $largest-spacing;
+            // border-bottom: 1px solid rgba(94, 94, 94, 0.8392156863);
+
+            h1 {
+                display: block;
+                margin-bottom: 20px;
+                margin-top: -10px;
+                font-size: 70px;
             }
 
-            #student-name {
-                h1 {
-                    top: 0;
-                    left: 0;
-                }
+            #text-column {
+                text-align: left;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+
+        #film-project-details {
+            display: flex;
+
+            .back-button-container {
+                margin: 30px 0;
+                text-align: left;
             }
 
-            #socials-container {
-                top: 0;
-                left: 0;
+            #project-text {
+                width: 45%;
+                padding-right: 150px;
             }
 
-            p {
-                width: 40%;
+            #project-stills {
+                width: 100%;
+                padding-top: 0;
             }
         }
     }
 
 }
+
 
 /* Large Desktop queries */
 @media screen and (min-width:1400px) {
@@ -412,7 +427,7 @@
     // general
 
     .container-lg {
-        padding: 60px 140px 160px 140px;
+        padding: 40px 140px 160px 140px;
     }
 
     .bubble {

@@ -19,6 +19,7 @@ export const filmData = [
             }
         ],
         project: "Plastic",
+        project_slug: "plastic",
         role: "My role in this project has been the editing side of things such as doing colour grading and audio mixing. The experience has been great such as bringing the narrative to life through setting the tone to the scenes through colour grading. I enjoyed talking with the director about what he wants me to do with the edit of the film and bringing his vision to life. I learnt that communication is key to bringing about the understandings of what needs doing on this project",
     },
     {
@@ -27,6 +28,7 @@ export const filmData = [
         headshot: "/student-images/film/headshots/rebecca.jpg",
         social_media: [],
         project: "Our Walk",
+        project_slug: "our-walk",
         photos: [
             {
                 caption: "Prepping blocking by giving the actors notes with their scripts"
@@ -49,6 +51,7 @@ export const filmData = [
         headshot: "/student-images/film/headshots/tane.jpg",
         social_media: [],
         project: "Plastic",
+        project_slug: "plastic",
         photos: [
             {
                 caption: "two cars one night referance. Jason and his sister Char contemplate attending a party."
@@ -80,6 +83,7 @@ export const filmData = [
             }
         ],
         project: "Plastic",
+        project_slug: "plastic",
         photos: [
             {
                 caption: "Setting up audio to record for the next take of a scene"
@@ -111,6 +115,7 @@ export const filmData = [
             }
         ],
         project: "Plastic",
+        project_slug: "plastic",
         photos: [
             {
                 caption: "Uncle Tim shows his heart to Jason"
@@ -142,6 +147,7 @@ export const filmData = [
             }
         ],
         project: "Hobson's Choice",
+        project_slug: "hobsons-choice",
         photos: [
             {
                 caption: "Always ready to mark the slate."
@@ -173,6 +179,7 @@ export const filmData = [
             }
         ],
         project: "Other Valuable Things",
+        project_slug: "other-valuable-things",
         photos: [
             {
                 caption: "#bestteamever"
@@ -200,6 +207,7 @@ export const filmData = [
             }
         ],
         project: "Other Valuable Things",
+        project_slug: "other-valuable-things",
         photos: [
             {
                 caption: "Other Valuable Things Poster"
@@ -231,6 +239,7 @@ export const filmData = [
             }
         ],
         project: "Our Walk",
+        project_slug: "our-walk",
         photos: [
             {
                 caption: "Final shot on the final day of filming completed"
@@ -262,6 +271,7 @@ export const filmData = [
             }
         ],
         project: "Hobson's Choice",
+        project_slug: "hobsons-choice",
         photos: [
             {
                 caption: "One of the candidates, Elle Baker - played by Grace Haselden. "
@@ -279,9 +289,9 @@ export const filmData = [
         role: "As the Producer for Hobson's Choice, it was a challenging endeavour to build this project from the ground up. There were countless hours of developing this story with our Director, running a fundraising campaign, managing finances, arranging sponsored catering, coordinating crew during pre-production and securing actors for our shoot. I was forced to learn quickly, adapt to the circumstances and resolve issues efficiently in order to keep the shoot running smoothly. I'm grateful for the opportunity to learn production management and exercise leadership in such a hands on way and I feel equipped to pursue more projects in the future.",
     },
     {
-        slug: "james",
+        slug: "james-2",
         name: "James Ritchie",
-        headshot: "/student-images/film/headshots/james.jpg",
+        headshot: "/student-images/film/headshots/james-2.jpg",
         social_media: [
             {
                 type: "email",
@@ -293,6 +303,7 @@ export const filmData = [
             }
         ],
         project: "Hobson's Choice",
+        project_slug: "hobsons-choice",
         photos: [
             {
                 caption: "Sound mixer James and Boom swinger Amani preparing the boom for recording. "
@@ -324,6 +335,7 @@ export const filmData = [
             }
         ],
         project: "Hobson's Choice",
+        project_slug: "hobsons-choice",
         photos: [
             {
                 caption: "This is a simple OTS shot that simply lets the dialogue do what it needs to do."
@@ -355,6 +367,7 @@ export const filmData = [
             }
         ],
         project: "Plastic",
+        project_slug: "plastic",
         photos: [
             {
                 caption: "This is the poster for our final project 'Plastic'."
@@ -382,6 +395,7 @@ export const filmData = [
             }
         ],
         project: "Hobson's Choice",
+        project_slug: "hobsons-choice",
         photos: [
             {
                 caption: "Nikki interviews Elle."
@@ -413,6 +427,7 @@ export const filmData = [
             }
         ],
         project: "Other Valuable Things",
+        project_slug: "other-valuable-things",
         photos: [
             {
                 caption: "Tension rising"
@@ -444,6 +459,7 @@ export const filmData = [
             }
         ],
         project: "Other Valuable Things",
+        project_slug: "other-valuable-things",
         photos: [
             {
                 caption: "Ophidia surveys Arthur after first entering her office"
@@ -471,6 +487,7 @@ export const filmData = [
             }
         ],
         project: "Our Walk",
+        project_slug: "our-walk",
         photos: [
             {
                 caption: "Setting up audio for the first take of day 1"
@@ -502,6 +519,7 @@ export const filmData = [
             }
         ],
         project: "Other Valuable Things",
+        project_slug: "other-valuable-things",
         photos: [
             {
                 caption: "Prop from Other Valuable Things"
@@ -533,6 +551,7 @@ export const filmData = [
             }
         ],
         project: "Our Walk",
+        project_slug: "our-walk",
         photos: [
             {
                 caption: "Just chilling while I wait for the next scene."

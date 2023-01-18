@@ -8,7 +8,8 @@ const Students = () => {
         return (
             <Link className="post-link" to={`/film/student/${student.slug}`} key={index} data-aos="zoom-out-down" data-aos-anchor-placement="top">
                 <div className="student-container">
-                    <h4 className="name film-student">{student.name}</h4>
+                    <img src={student.headshot} alt={student.name + " headshot"} />
+                    <h4 className="name">{student.name}</h4>
                 </div>
             </Link>
         )

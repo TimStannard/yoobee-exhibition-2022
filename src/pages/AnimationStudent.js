@@ -47,16 +47,29 @@ const Student = () => {
             <div id="bubble-1" className="bubble">
                 <img src={bubble} alt="colourful bubble background decal" />
             </div>
-            <div id="student-details">
-                <Link to="/animation">
-                    <div id="breadcrumbs" data-aos="zoom-out">Animation</div>
-                </Link>
-                <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
-                    <span id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></span>
-                    <h1>{studentData.name}</h1>
+            <div id="desktop-student-details" className="hide-on-mobile">
+                <div className="image-column">
+                    <div id="desktop-display-pic" data-aos="zoom-out" data-aos-delay="100" style={{ backgroundImage: "url(" + studentData.headshot + ")", }}></div>
+                </div>
+                <div id="text-column">
+                    <Link to="/animation">
+                        <div className="breadcrumbs" data-aos="zoom-out">Animation</div>
+                    </Link>
+                    <div className="student-name" data-aos="zoom-out" data-aos-delay="50">
+                        <h1>{studentData.name}</h1>
+                    </div>
                 </div>
             </div>
-            <img id="student-headshot" data-aos="zoom-out" data-aos-delay="100" src={studentData.headshot} alt={studentData.name + " headshot"} />
+            <div className="hide-on-desktop">
+                <div id="student-details">
+                    <Link to="/animation">
+                        <div className="breadcrumbs" data-aos="zoom-out">Animation</div>
+                    </Link>
+                    <div id="student-name" data-aos="zoom-out" data-aos-delay="50">
+                        <h1>{studentData.name}</h1>
+                    </div>
+                </div>
+            </div>
             <h2 data-aos="zoom-out" data-aos-delay="250">Showreel</h2>
             <video width="100%" height="240" controls data-aos="zoom-out" data-aos-delay="300">
                 <source src={`http://ignite.yoobeestudent.net/${slug}.mp4`} type="video/mp4" />

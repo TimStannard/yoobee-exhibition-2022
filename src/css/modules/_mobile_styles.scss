@@ -238,6 +238,7 @@ img {
     h2 {
         @include h2-styles;
         margin-bottom: $larger-spacing;
+        color: $yellow;
     }
 
     #student-name {
@@ -262,7 +263,7 @@ img {
         display: none;
     }
 
-    #breadcrumbs {
+    .breadcrumbs {
         text-align: center;
         color: black;
         text-transform: uppercase;
@@ -277,11 +278,11 @@ img {
         box-shadow: 3px 3px 0px 1px $purple;
     }
 
-    #student-page-button {
+    .student-page-button {
         margin: $med-spacing 0 $large-spacing 0;
     }
 
-    #socials-container {
+    .socials-container {
         margin-bottom: $largest-spacing;
 
         .social-icon {
@@ -302,6 +303,7 @@ img {
 
     video {
         background: black;
+        margin-bottom: $large-spacing;
     }
 
     &.film-tv {
@@ -313,6 +315,35 @@ img {
         h4 {
             font-size: 24px;
             margin-bottom: $large-spacing;
+        }
+    }
+
+    #film-project-details {
+        #project-stills {
+            width: 100%;
+            color: white;
+            text-align: left;
+            padding-top: 30px;
+
+            .photo-with-caption {
+                img {
+                    width: 100%;
+                    border-radius: 5px 5px 0 0;
+                }
+
+                display: block;
+                border-radius: 5px;
+                padding: 3px 2px;
+
+                p {
+                    background: rgb(53, 53, 53);
+                    margin-top: -5px;
+                    padding: 5px 8px 4px 8px;
+                    color: #c8c8c8;
+                    font-weight: 200;
+                    font-size: 15px;
+                }
+            }
         }
     }
 }
