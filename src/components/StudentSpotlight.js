@@ -7,6 +7,7 @@ import { EffectCards } from 'swiper';
 // get data for spotlight students
 import { animationData } from '../data/animationStudentData';
 import { webData } from '../data/webStudentData';
+import { filmData } from '../data/filmStudentData';
 // swiper
 import 'swiper/swiper.min.css';
 // utilities
@@ -32,8 +33,14 @@ const RandomStudentSlides = () => {
         student.faculty_pretty_print = "Animation";
         return student;
     })
+    // get all film students
+    const filmStudents = filmData.map((student) => {
+        student.faculty = "film";
+        student.faculty_pretty_print = "Film & TV";
+        return student;
+    })
 
-    const allStudents = [...webStudents, ...animationStudents];
+    const allStudents = [...webStudents, ...animationStudents, ...filmStudents];
 
     const randomStudentIndexes = [];
     // generate random number to choose a random student

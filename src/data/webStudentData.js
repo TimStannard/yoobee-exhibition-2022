@@ -121,6 +121,10 @@ export const webData = [
             {
                 type: "github",
                 link: "Dow-Dodds"
+            },
+            {
+                type: "portfolio",
+                link: "https://dow.yoobeestudent.net/dow-portfolio-frontend/"
             }
         ],
         projects: [

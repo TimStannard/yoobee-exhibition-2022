@@ -337,7 +337,7 @@ img {
 
                 p {
                     background: rgb(53, 53, 53);
-                    margin-top: -5px;
+                    margin-top: -3px;
                     padding: 5px 8px 4px 8px;
                     color: #c8c8c8;
                     font-weight: 200;
@@ -371,6 +371,7 @@ img {
 .project-container {
     .project-item {
         margin-bottom: $large-spacing;
+        text-align: center;
     }
 
     .project-image {

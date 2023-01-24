@@ -4,6 +4,7 @@ import '../css/main.css'
 import { HashRouter, Routes, Route } from "react-router-dom";
 // import utils
 import ScrollToTop from "../util/ScrollToTop";
+import { IdleRedirect } from '../util/IdleRedirect';
 // import components
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <HashRouter>
       <ScrollToTop />
+      <IdleRedirect />
       <Navbar />
       <Routes>
         {/* all our routes go in here */}

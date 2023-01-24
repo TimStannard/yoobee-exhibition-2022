@@ -816,7 +816,7 @@ img {
 }
 #student-page #film-project-details #project-stills .photo-with-caption p {
   background: rgb(53, 53, 53);
-  margin-top: -5px;
+  margin-top: -3px;
   padding: 5px 8px 4px 8px;
   color: #c8c8c8;
   font-weight: 200;
@@ -853,6 +853,7 @@ img {
 
 .project-container .project-item {
   margin-bottom: 30px;
+  text-align: center;
 }
 .project-container .project-image {
   width: 80%;
@@ -1204,8 +1205,8 @@ p {
   #student-page #desktop-student-details #desktop-display-pic {
     display: block;
     background-size: cover;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin-right: 40px;
   }
@@ -1249,12 +1250,40 @@ p {
     text-align: left;
   }
   #student-page #film-project-details #project-text {
-    width: 45%;
-    padding-right: 150px;
+    width: 40%;
+    transition: all 1s ease;
+    padding: 30px;
+    margin-top: -30px;
+  }
+  #student-page #film-project-details #project-text h2,
+#student-page #film-project-details #project-text p {
+    max-width: 25vw;
+  }
+  #student-page #film-project-details #project-text.is-sticky {
+    width: 40%;
+    position: fixed;
+    top: 0;
+    padding-top: 100px;
+  }
+  #student-page #film-project-details #project-text.is-sticky:after {
+    background: #1a1a18;
+    border-radius: 5%;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -50%;
+    position: absolute;
+    top: -2%;
+    width: 126%;
+    z-index: -1;
   }
   #student-page #film-project-details #project-stills {
-    width: 100%;
+    width: 60%;
     padding-top: 0;
+  }
+  #student-page #film-project-details #project-stills.is-sticky {
+    width: 58.35%;
+    margin-left: 41.7%;
   }
 }
 /* Large Desktop queries */
@@ -1263,7 +1292,7 @@ p {
     padding: 40px 140px 160px 140px;
   }
   .bubble {
-    height: 205vh;
+    height: 156vh;
   }
   .bubble img {
     max-width: 2000px;
